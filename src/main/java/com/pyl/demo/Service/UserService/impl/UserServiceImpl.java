@@ -1,32 +1,73 @@
-package com.pyl.demo.Service.impl;
+package com.pyl.demo.Service.UserService.impl;
 
 
-import com.pyl.demo.Service.UserService;
-import com.pyl.demo.mapper.UserMapper;
-import com.pyl.demo.model.User;
+import com.pyl.demo.Service.UserService.UserService;
+import com.pyl.demo.mapper.USER_infoMapper;
+import com.pyl.demo.model.USER_info;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 
+
 @Service("UserService")
-public class UserServiceImpl implements UserService {
+@Transactional
+public class UserServiceimpl implements UserDetailsService {
+
+    private final static Logger logger = LoggerFactory.getLogger(UserServiceimpl.class);
+
     @Autowired
-    private UserMapper userMapper;
+    private USER_infoMapper USER_INFO_MAPPER;
 
+    //select对应的用户名和密码,用户登录
     @Override
-    public int addUser(User user) {
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException{
+        USER_info user_info = USER_INFO_MAPPER.loadUserByUsername(username);
+        logger.info("取出的username:"+user_info.getUsername()+"取出的password:"+user_info.getPassword());
+        if(user_info==null){
+            throw new UsernameNotFoundException("用户名不对");
+        }
+        return user_info;
+    }
 
-        return userMapper.insertSelective(user);
+    //根据用户名搜索对应，判断该用户是否注册
+
+    public boolean findUsers(String username){
+        if(USER_INFO_MAPPER.loadUserByUsername(username)==null){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+    //更新数据
+    public String update(String username,String nickname,String address,String email,String phone){
+        USER_info user_info = (USER_info) this.loadUserByUsername(username);
+        int i = USER_INFO_MAPPER.updateByPrimaryKey(user_info);
+        if(i>0){
+            return "ok";
+        }else{
+            return "fail";
+        }
+    }
+
+    public int getID(String username){
+        return USER_INFO_MAPPER.selectIDByUsername(username);
     }
 
 
-    @Override
-    public List<User> findAllUser() {
-        //将参数传给这个方法就可以实现物理分页了，非常简单。
-        return userMapper.selectAllUser();
-    }
+
+
+
+
+
 
 
 
