@@ -1,0 +1,142 @@
+2018-12-21 23:18:01.077 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2018-12-21 23:18:01.087 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/User/getPer_info
+2018-12-21 23:18:01.280 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=1, url='/mainpage/**', path='/mainpage', component='home', name='mainpage', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@4c5d9ab, com.pyl.demo.model.role@4ca26875], children=null}
+2018-12-21 23:18:01.280 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=2, url='/login', path='/login', component='login', name='login', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@71497690, com.pyl.demo.model.role@3db9f190], children=null}
+2018-12-21 23:18:01.281 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=3, url='/per_info', path='/per_info', component='per_info', name='per_info', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@171b6f0d, com.pyl.demo.model.role@48254c5b], children=null}
+2018-12-21 23:18:01.281 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=4, url='/User/**', path='/per_info', component='per_info', name='per_info', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@72625e39, com.pyl.demo.model.role@251494], children=null}
+2018-12-21 23:18:01.281 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=5, url='/TSB/getAllplants', path='null', component='null', name='null', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@4c8a709a, com.pyl.demo.model.role@2e2fbac4], children=null}
+2018-12-21 23:18:01.281 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:18:01.281 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:18:01.281 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:18:01.281 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:18:01.281 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:18:01.281 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:18:01.282 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:18:01.282 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:18:01.282 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:18:01.282 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:18:01.282 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:18:01.282 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**请求的url：/User/getPer_info
+2018-12-21 23:18:01.282 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:18:01.282 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login请求的url：/User/getPer_info
+2018-12-21 23:18:01.282 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:18:01.282 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/per_info请求的url：/User/getPer_info
+2018-12-21 23:18:01.282 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:18:01.283 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/User/**请求的url：/User/getPer_info
+2018-12-21 23:18:01.283 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2018-12-21 23:18:01.283 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2018-12-21 23:18:01.283 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2018-12-21 23:18:01.283 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_ADMIN
+2018-12-21 23:18:01.283 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_ANONYMOUS]
+2018-12-21 23:18:01.283 logback [http-nio-8082-exec-4] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_ANONYMOUS当前的角色是：ROLE_ADMIN
+2018-12-21 23:18:01.283 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_GENERA
+2018-12-21 23:18:01.283 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_ANONYMOUS]
+2018-12-21 23:18:01.283 logback [http-nio-8082-exec-4] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_ANONYMOUS当前的角色是：ROLE_GENERA
+2018-12-21 23:18:01.283 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - 该角色权限不足！
+2018-12-21 23:18:01.310 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2018-12-21 23:18:01.311 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/login
+2018-12-21 23:18:01.453 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=1, url='/mainpage/**', path='/mainpage', component='home', name='mainpage', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@f4e6c4f, com.pyl.demo.model.role@2e24f2a3], children=null}
+2018-12-21 23:18:01.454 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=2, url='/login', path='/login', component='login', name='login', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@19be2704, com.pyl.demo.model.role@3458e39e], children=null}
+2018-12-21 23:18:01.454 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=3, url='/per_info', path='/per_info', component='per_info', name='per_info', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@4888cd4e, com.pyl.demo.model.role@41b09f16], children=null}
+2018-12-21 23:18:01.454 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=4, url='/User/**', path='/per_info', component='per_info', name='per_info', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@29de0623, com.pyl.demo.model.role@5ae95495], children=null}
+2018-12-21 23:18:01.454 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=5, url='/TSB/getAllplants', path='null', component='null', name='null', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@5405003b, com.pyl.demo.model.role@11086d82], children=null}
+2018-12-21 23:18:01.454 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:18:01.454 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:18:01.454 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:18:01.454 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:18:01.454 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:18:01.454 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:18:01.454 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:18:01.454 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:18:01.454 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:18:01.454 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:18:01.454 logback [http-nio-8082-exec-6] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:18:01.454 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**请求的url：/login
+2018-12-21 23:18:01.454 logback [http-nio-8082-exec-6] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:18:01.454 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login请求的url：/login
+2018-12-21 23:18:01.455 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2018-12-21 23:18:01.455 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2018-12-21 23:18:01.455 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2018-12-21 23:18:01.459 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_GENERA
+2018-12-21 23:18:01.459 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_ANONYMOUS]
+2018-12-21 23:18:01.459 logback [http-nio-8082-exec-6] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_ANONYMOUS当前的角色是：ROLE_GENERA
+2018-12-21 23:18:01.459 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_ADMIN
+2018-12-21 23:18:01.459 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_ANONYMOUS]
+2018-12-21 23:18:01.459 logback [http-nio-8082-exec-6] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_ANONYMOUS当前的角色是：ROLE_ADMIN
+2018-12-21 23:18:01.459 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 该角色权限不足！
+2018-12-21 23:18:52.960 logback [http-nio-8082-exec-7] INFO  c.p.d.S.U.impl.UserServiceimpl - 取出的username:aaa取出的password:47bce5c74f589f4867dbd57e9ca9f808
+2018-12-21 23:18:53.239 logback [http-nio-8082-exec-7] INFO  c.pyl.demo.config.WebSecurityConfig - -------请求成功--------
+2018-12-21 23:18:53.239 logback [http-nio-8082-exec-7] INFO  c.pyl.demo.config.WebSecurityConfig - {"status":"success","msg":{"id":1,"username":"aaa","pwd":"47bce5c74f589f4867dbd57e9ca9f808","email":"21@qq.com","nickname":"allyn","address":"Stev. kerr","phone":"510435","roles":[{"id":1,"name":"ROLE_GENERA","namezh":"普通用户"}],"password":"47bce5c74f589f4867dbd57e9ca9f808","enabled":true,"credentialsNonExpired":true,"accountNonExpired":true,"accountNonLocked":true}}
+2018-12-21 23:18:54.671 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2018-12-21 23:18:54.672 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/TSB/getAllplants
+2018-12-21 23:18:54.909 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=1, url='/mainpage/**', path='/mainpage', component='home', name='mainpage', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@2ab48df, com.pyl.demo.model.role@7acd8932], children=null}
+2018-12-21 23:18:54.909 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=2, url='/login', path='/login', component='login', name='login', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@7ca2f01f, com.pyl.demo.model.role@7f647cdd], children=null}
+2018-12-21 23:18:54.909 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=3, url='/per_info', path='/per_info', component='per_info', name='per_info', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@27512e5e, com.pyl.demo.model.role@31c3a79f], children=null}
+2018-12-21 23:18:54.909 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=4, url='/User/**', path='/per_info', component='per_info', name='per_info', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@5a8a9bb0, com.pyl.demo.model.role@65496a8], children=null}
+2018-12-21 23:18:54.909 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=5, url='/TSB/getAllplants', path='null', component='null', name='null', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@28597be2, com.pyl.demo.model.role@40ace29], children=null}
+2018-12-21 23:18:54.909 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:18:54.909 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:18:54.909 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:18:54.910 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:18:54.910 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:18:54.910 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:18:54.910 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:18:54.910 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:18:54.910 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:18:54.910 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:18:54.910 logback [http-nio-8082-exec-9] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:18:54.910 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**请求的url：/TSB/getAllplants
+2018-12-21 23:18:54.910 logback [http-nio-8082-exec-9] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:18:54.910 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login请求的url：/TSB/getAllplants
+2018-12-21 23:18:54.910 logback [http-nio-8082-exec-9] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:18:54.910 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/per_info请求的url：/TSB/getAllplants
+2018-12-21 23:18:54.911 logback [http-nio-8082-exec-9] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:18:54.911 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/User/**请求的url：/TSB/getAllplants
+2018-12-21 23:18:54.911 logback [http-nio-8082-exec-9] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:18:54.911 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getAllplants请求的url：/TSB/getAllplants
+2018-12-21 23:18:54.911 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2018-12-21 23:18:54.911 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2018-12-21 23:18:54.911 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2018-12-21 23:18:54.911 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_ADMIN
+2018-12-21 23:18:54.911 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2018-12-21 23:18:54.911 logback [http-nio-8082-exec-9] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA当前的角色是：ROLE_ADMIN
+2018-12-21 23:18:54.911 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_GENERA
+2018-12-21 23:18:54.911 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2018-12-21 23:18:54.911 logback [http-nio-8082-exec-9] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA当前的角色是：ROLE_GENERA
+2018-12-21 23:18:54.911 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - 拥有权限，准许使用该功能！
+2018-12-21 23:18:57.249 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2018-12-21 23:18:57.249 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/User/getPer_info
+2018-12-21 23:18:57.464 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=1, url='/mainpage/**', path='/mainpage', component='home', name='mainpage', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@24d6e940, com.pyl.demo.model.role@58248520], children=null}
+2018-12-21 23:18:57.465 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=2, url='/login', path='/login', component='login', name='login', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@5c1fbe78, com.pyl.demo.model.role@92873e8], children=null}
+2018-12-21 23:18:57.465 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=3, url='/per_info', path='/per_info', component='per_info', name='per_info', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@1a271764, com.pyl.demo.model.role@66d69c85], children=null}
+2018-12-21 23:18:57.465 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=4, url='/User/**', path='/per_info', component='per_info', name='per_info', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@471b1259, com.pyl.demo.model.role@d668e61], children=null}
+2018-12-21 23:18:57.466 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=5, url='/TSB/getAllplants', path='null', component='null', name='null', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@2fd8249e, com.pyl.demo.model.role@7db8a754], children=null}
+2018-12-21 23:18:57.466 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:18:57.466 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:18:57.466 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:18:57.466 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:18:57.466 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:18:57.466 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:18:57.466 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:18:57.466 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:18:57.466 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:18:57.466 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:18:57.466 logback [http-nio-8082-exec-8] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:18:57.467 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**请求的url：/User/getPer_info
+2018-12-21 23:18:57.467 logback [http-nio-8082-exec-8] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:18:57.467 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login请求的url：/User/getPer_info
+2018-12-21 23:18:57.467 logback [http-nio-8082-exec-8] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:18:57.467 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/per_info请求的url：/User/getPer_info
+2018-12-21 23:18:57.467 logback [http-nio-8082-exec-8] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:18:57.473 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/User/**请求的url：/User/getPer_info
+2018-12-21 23:18:57.473 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2018-12-21 23:18:57.473 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2018-12-21 23:18:57.473 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2018-12-21 23:18:57.473 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_ADMIN
+2018-12-21 23:18:57.473 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2018-12-21 23:18:57.473 logback [http-nio-8082-exec-8] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA当前的角色是：ROLE_ADMIN
+2018-12-21 23:18:57.473 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_GENERA
+2018-12-21 23:18:57.473 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2018-12-21 23:18:57.473 logback [http-nio-8082-exec-8] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA当前的角色是：ROLE_GENERA
+2018-12-21 23:18:57.473 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - 拥有权限，准许使用该功能！
+2018-12-21 23:18:57.831 logback [http-nio-8082-exec-8] INFO  c.p.d.S.U.impl.UserServiceimpl - 取出的username:aaa取出的password:47bce5c74f589f4867dbd57e9ca9f808

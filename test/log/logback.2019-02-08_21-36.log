@@ -1,0 +1,32 @@
+2019-02-08 21:36:03.920 logback [main] INFO  com.DemoApplication - Starting DemoApplication on PYL with PID 51664 (D:\ideaProject\farmproduceManage\target\classes started by 宇龙 in D:\ideaProject\farmproduceManage)
+2019-02-08 21:36:03.935 logback [main] INFO  com.DemoApplication - No active profile set, falling back to default profiles: default
+2019-02-08 21:36:05.937 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2019-02-08 21:36:05.963 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2019-02-08 21:36:05.971 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-02-08 21:36:05.972 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-02-08 21:36:05.983 logback [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_191\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;%QUARTUS_ROOTDIR%\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\130\DTS\Binn\;D:\MATLAB\R2016a\runtime\win64;D:\MATLAB\R2016a\bin;D:\MATLAB\R2016a\polyspace\bin;C:\Program Files\nodejs\;D:\Microsoft VS Code\bin;D:\Python\Python37\Scripts\;D:\Python\Python37\;C:\Users\宇龙\AppData\Local\Microsoft\WindowsApps;C:\mysql-5.7.17-winx64 (1)\mysql-5.7.17-winx64\bin;C:\Wind\Wind.NET.Client\WindNET\bin\;D:\apache-ant-1.9.11-bin\apache-ant-1.9.11\bin;D:\hadoop\hadoop-2.9.0\bin;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;;D:\Microsoft VS Code\bin;C:\Users\宇龙\AppData\Roaming\npm;D:\JetBrains\PyCharm Community Edition 2018.3.2\bin;;.]
+2019-02-08 21:36:06.221 logback [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-02-08 21:36:06.221 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2154 ms
+2019-02-08 21:36:06.300 logback [main] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-08 21:36:06.301 logback [main] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-08 21:36:06.301 logback [main] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2019-02-08 21:36:06.301 logback [main] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-08 21:36:06.301 logback [main] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-02-08 21:36:06.302 logback [main] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2019-02-08 21:36:06.302 logback [main] INFO  o.s.b.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2019-02-08 21:36:06.302 logback [main] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet statViewServlet mapped to [/druid/*]
+2019-02-08 21:36:06.304 logback [main] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2019-02-08 21:36:06.304 logback [main] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet statViewServlet mapped to [/druid/*]
+2019-02-08 21:36:06.305 logback [main] INFO  o.s.b.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2019-02-08 21:36:07.199 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-08 21:36:07.699 logback [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/index.html'], []
+2019-02-08 21:36:07.699 logback [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/static/**'], []
+2019-02-08 21:36:07.699 logback [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/login_p'], []
+2019-02-08 21:36:07.699 logback [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='login**'], []
+2019-02-08 21:36:07.700 logback [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/favicon.ico'], []
+2019-02-08 21:36:07.700 logback [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/druid/**'], []
+2019-02-08 21:36:07.748 logback [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5b5e7036, org.springframework.security.web.context.SecurityContextPersistenceFilter@e57e5d6, org.springframework.security.web.header.HeaderWriterFilter@7e74a380, org.springframework.web.filter.CorsFilter@62dbe64e, org.springframework.security.web.authentication.logout.LogoutFilter@a9f023e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4da6d664, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@78054f54, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e7ab390, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6cff61fc, org.springframework.security.web.session.SessionManagementFilter@22a6e998, org.springframework.security.web.access.ExceptionTranslationFilter@5bc28f40, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@53e800f9]
+2019-02-08 21:36:07.863 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2019-02-08 21:36:07.882 logback [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-02-08 21:36:07.907 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2019-02-08 21:36:07.913 logback [main] INFO  com.DemoApplication - Started DemoApplication in 5.306 seconds (JVM running for 7.796)

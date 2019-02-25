@@ -1,0 +1,4 @@
+2019-01-17 23:40:58.872 logback [http-nio-8082-exec-2] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2019-01-17 23:40:58.882 logback [http-nio-8082-exec-2] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/informationBefo/getAllDiseaseRecord
+2019-01-17 23:40:58.915 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2019-01-17 23:40:58.916 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/informationBefo/getDiseaseRecordNum

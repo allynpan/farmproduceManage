@@ -1,0 +1,6 @@
+2018-12-15 23:53:13.270 logback [http-nio-8082-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-12-15 23:53:13.287 logback [http-nio-8082-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2018-12-15 23:53:13.314 logback [http-nio-8082-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 26 ms
+2018-12-15 23:53:13.381 logback [http-nio-8082-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - test - Starting...
+2018-12-15 23:53:14.405 logback [http-nio-8082-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - test - Start completed.
+2018-12-15 23:53:14.714 logback [http-nio-8082-exec-2] INFO  c.p.d.S.U.impl.UserServiceimpl - 取出的username:aaa取出的password:47bce5c74f589f4867dbd57e9ca9f808

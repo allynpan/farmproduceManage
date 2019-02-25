@@ -1,0 +1,210 @@
+2019-01-13 01:10:24.309 logback [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-01-13 01:10:24.318 logback [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-01-13 01:10:24.332 logback [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2019-01-13 01:10:24.384 logback [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - test - Starting...
+2019-01-13 01:10:25.513 logback [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - test - Start completed.
+2019-01-13 01:10:25.962 logback [http-nio-8082-exec-1] INFO  c.p.d.S.U.impl.UserServiceimpl - 取出的username:aaa取出的password:47bce5c74f589f4867dbd57e9ca9f808
+2019-01-13 01:10:26.324 logback [http-nio-8082-exec-1] INFO  com.pyl.demo.model.USER_info - ------调用user model中的调用证书------
+2019-01-13 01:10:26.325 logback [http-nio-8082-exec-1] INFO  com.pyl.demo.model.USER_info - 此次获得的证书:[ROLE_GENERA]
+2019-01-13 01:10:26.398 logback [http-nio-8082-exec-1] INFO  c.pyl.demo.config.WebSecurityConfig - -------请求成功--------
+2019-01-13 01:10:26.398 logback [http-nio-8082-exec-1] INFO  c.pyl.demo.config.WebSecurityConfig - {"status":"success","msg":{"id":1,"username":"aaa","pwd":"47bce5c74f589f4867dbd57e9ca9f808","email":"21@qq.com","nickname":"allyn","address":"Stev. kerr","phone":"510435","img_path":null,"roles":[{"id":1,"name":"ROLE_GENERA","namezh":"普通用户"}],"accountNonExpired":true,"accountNonLocked":true,"credentialsNonExpired":true,"password":"47bce5c74f589f4867dbd57e9ca9f808","enabled":true}}
+2019-01-13 01:10:26.573 logback [http-nio-8082-exec-2] INFO  c.p.d.S.U.impl.UserServiceimpl - 取出的username:aaa取出的password:47bce5c74f589f4867dbd57e9ca9f808
+2019-01-13 01:10:26.755 logback [http-nio-8082-exec-2] INFO  com.pyl.demo.model.USER_info - ------调用user model中的调用证书------
+2019-01-13 01:10:26.755 logback [http-nio-8082-exec-2] INFO  com.pyl.demo.model.USER_info - 此次获得的证书:[ROLE_GENERA]
+2019-01-13 01:10:26.766 logback [http-nio-8082-exec-2] INFO  c.pyl.demo.config.WebSecurityConfig - -------请求成功--------
+2019-01-13 01:10:26.766 logback [http-nio-8082-exec-2] INFO  c.pyl.demo.config.WebSecurityConfig - {"status":"success","msg":{"id":1,"username":"aaa","pwd":"47bce5c74f589f4867dbd57e9ca9f808","email":"21@qq.com","nickname":"allyn","address":"Stev. kerr","phone":"510435","img_path":null,"roles":[{"id":1,"name":"ROLE_GENERA","namezh":"普通用户"}],"accountNonExpired":true,"accountNonLocked":true,"credentialsNonExpired":true,"password":"47bce5c74f589f4867dbd57e9ca9f808","enabled":true}}
+2019-01-13 01:10:28.148 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2019-01-13 01:10:28.148 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2019-01-13 01:10:28.148 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/informationBefo/getPlantNum
+2019-01-13 01:10:28.148 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/informationBefo/getAllplant
+2019-01-13 01:10:28.322 logback [http-nio-8082-exec-3] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:28.323 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**请求的url：/informationBefo/getPlantNum
+2019-01-13 01:10:28.323 logback [http-nio-8082-exec-3] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:28.323 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login**请求的url：/informationBefo/getPlantNum
+2019-01-13 01:10:28.323 logback [http-nio-8082-exec-3] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:28.323 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/per_info请求的url：/informationBefo/getPlantNum
+2019-01-13 01:10:28.323 logback [http-nio-8082-exec-3] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:28.323 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/User/**请求的url：/informationBefo/getPlantNum
+2019-01-13 01:10:28.323 logback [http-nio-8082-exec-3] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:28.323 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getAllplants**请求的url：/informationBefo/getPlantNum
+2019-01-13 01:10:28.324 logback [http-nio-8082-exec-3] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:28.324 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getTSB_info**请求的url：/informationBefo/getPlantNum
+2019-01-13 01:10:28.324 logback [http-nio-8082-exec-3] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:28.324 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/informationBefo/**请求的url：/informationBefo/getPlantNum
+2019-01-13 01:10:28.324 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2019-01-13 01:10:28.324 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2019-01-13 01:10:28.324 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2019-01-13 01:10:28.324 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_GENERA
+2019-01-13 01:10:28.324 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-01-13 01:10:28.324 logback [http-nio-8082-exec-3] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     当前的角色是：ROLE_GENERA
+2019-01-13 01:10:28.324 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - 拥有权限，准许使用该功能！
+2019-01-13 01:10:28.418 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:28.418 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**请求的url：/informationBefo/getAllplant
+2019-01-13 01:10:28.418 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:28.418 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login**请求的url：/informationBefo/getAllplant
+2019-01-13 01:10:28.418 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:28.418 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/per_info请求的url：/informationBefo/getAllplant
+2019-01-13 01:10:28.419 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:28.419 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/User/**请求的url：/informationBefo/getAllplant
+2019-01-13 01:10:28.419 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:28.419 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getAllplants**请求的url：/informationBefo/getAllplant
+2019-01-13 01:10:28.419 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:28.419 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getTSB_info**请求的url：/informationBefo/getAllplant
+2019-01-13 01:10:28.419 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:28.419 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/informationBefo/**请求的url：/informationBefo/getAllplant
+2019-01-13 01:10:28.420 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2019-01-13 01:10:28.420 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2019-01-13 01:10:28.420 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2019-01-13 01:10:28.420 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_GENERA
+2019-01-13 01:10:28.420 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-01-13 01:10:28.420 logback [http-nio-8082-exec-4] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     当前的角色是：ROLE_GENERA
+2019-01-13 01:10:28.420 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - 拥有权限，准许使用该功能！
+2019-01-13 01:10:28.442 logback [http-nio-8082-exec-4] INFO  c.p.demo.Controller.InfoMaComtroller - pageNum:1pageSize:5username:aaa
+2019-01-13 01:10:31.269 logback [http-nio-8082-exec-5] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2019-01-13 01:10:31.269 logback [http-nio-8082-exec-5] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/informationBefo/getAllPlantRecord
+2019-01-13 01:10:31.432 logback [http-nio-8082-exec-5] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:31.432 logback [http-nio-8082-exec-5] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**请求的url：/informationBefo/getAllPlantRecord
+2019-01-13 01:10:31.432 logback [http-nio-8082-exec-5] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:31.432 logback [http-nio-8082-exec-5] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login**请求的url：/informationBefo/getAllPlantRecord
+2019-01-13 01:10:31.432 logback [http-nio-8082-exec-5] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:31.433 logback [http-nio-8082-exec-5] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/per_info请求的url：/informationBefo/getAllPlantRecord
+2019-01-13 01:10:31.433 logback [http-nio-8082-exec-5] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:31.433 logback [http-nio-8082-exec-5] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/User/**请求的url：/informationBefo/getAllPlantRecord
+2019-01-13 01:10:31.433 logback [http-nio-8082-exec-5] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:31.433 logback [http-nio-8082-exec-5] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getAllplants**请求的url：/informationBefo/getAllPlantRecord
+2019-01-13 01:10:31.433 logback [http-nio-8082-exec-5] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:31.433 logback [http-nio-8082-exec-5] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getTSB_info**请求的url：/informationBefo/getAllPlantRecord
+2019-01-13 01:10:31.433 logback [http-nio-8082-exec-5] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:31.433 logback [http-nio-8082-exec-5] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/informationBefo/**请求的url：/informationBefo/getAllPlantRecord
+2019-01-13 01:10:31.433 logback [http-nio-8082-exec-5] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2019-01-13 01:10:31.433 logback [http-nio-8082-exec-5] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2019-01-13 01:10:31.433 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2019-01-13 01:10:31.433 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_GENERA
+2019-01-13 01:10:31.433 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-01-13 01:10:31.433 logback [http-nio-8082-exec-5] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     当前的角色是：ROLE_GENERA
+2019-01-13 01:10:31.433 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - 拥有权限，准许使用该功能！
+2019-01-13 01:10:31.434 logback [http-nio-8082-exec-5] INFO  c.p.demo.Controller.InfoMaComtroller - pageNum:1pageSize:5
+2019-01-13 01:10:31.575 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2019-01-13 01:10:31.575 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/informationBefo/getPlaceRecordNum
+2019-01-13 01:10:31.817 logback [http-nio-8082-exec-6] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:31.817 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**请求的url：/informationBefo/getPlaceRecordNum
+2019-01-13 01:10:31.817 logback [http-nio-8082-exec-6] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:31.817 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login**请求的url：/informationBefo/getPlaceRecordNum
+2019-01-13 01:10:31.817 logback [http-nio-8082-exec-6] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:31.817 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/per_info请求的url：/informationBefo/getPlaceRecordNum
+2019-01-13 01:10:31.818 logback [http-nio-8082-exec-6] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:31.818 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/User/**请求的url：/informationBefo/getPlaceRecordNum
+2019-01-13 01:10:31.818 logback [http-nio-8082-exec-6] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:31.818 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getAllplants**请求的url：/informationBefo/getPlaceRecordNum
+2019-01-13 01:10:31.818 logback [http-nio-8082-exec-6] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:31.818 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getTSB_info**请求的url：/informationBefo/getPlaceRecordNum
+2019-01-13 01:10:31.818 logback [http-nio-8082-exec-6] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:31.818 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/informationBefo/**请求的url：/informationBefo/getPlaceRecordNum
+2019-01-13 01:10:31.818 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2019-01-13 01:10:31.818 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2019-01-13 01:10:31.818 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2019-01-13 01:10:31.818 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_ADMIN
+2019-01-13 01:10:31.819 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-01-13 01:10:31.819 logback [http-nio-8082-exec-6] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     当前的角色是：ROLE_ADMIN
+2019-01-13 01:10:31.819 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_GENERA
+2019-01-13 01:10:31.819 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-01-13 01:10:31.819 logback [http-nio-8082-exec-6] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     当前的角色是：ROLE_GENERA
+2019-01-13 01:10:31.819 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 拥有权限，准许使用该功能！
+2019-01-13 01:10:34.367 logback [http-nio-8082-exec-7] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2019-01-13 01:10:34.367 logback [http-nio-8082-exec-7] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/informationBefo/getAllShaveRecord
+2019-01-13 01:10:34.405 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2019-01-13 01:10:34.406 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/informationBefo/getShaveRecordNum
+2019-01-13 01:10:34.528 logback [http-nio-8082-exec-7] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:34.529 logback [http-nio-8082-exec-7] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**请求的url：/informationBefo/getAllShaveRecord
+2019-01-13 01:10:34.529 logback [http-nio-8082-exec-7] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:34.529 logback [http-nio-8082-exec-7] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login**请求的url：/informationBefo/getAllShaveRecord
+2019-01-13 01:10:34.529 logback [http-nio-8082-exec-7] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:34.529 logback [http-nio-8082-exec-7] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/per_info请求的url：/informationBefo/getAllShaveRecord
+2019-01-13 01:10:34.529 logback [http-nio-8082-exec-7] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:34.529 logback [http-nio-8082-exec-7] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/User/**请求的url：/informationBefo/getAllShaveRecord
+2019-01-13 01:10:34.529 logback [http-nio-8082-exec-7] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:34.529 logback [http-nio-8082-exec-7] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getAllplants**请求的url：/informationBefo/getAllShaveRecord
+2019-01-13 01:10:34.529 logback [http-nio-8082-exec-7] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:34.529 logback [http-nio-8082-exec-7] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getTSB_info**请求的url：/informationBefo/getAllShaveRecord
+2019-01-13 01:10:34.529 logback [http-nio-8082-exec-7] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:34.529 logback [http-nio-8082-exec-7] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/informationBefo/**请求的url：/informationBefo/getAllShaveRecord
+2019-01-13 01:10:34.529 logback [http-nio-8082-exec-7] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2019-01-13 01:10:34.529 logback [http-nio-8082-exec-7] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2019-01-13 01:10:34.529 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2019-01-13 01:10:34.529 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_GENERA
+2019-01-13 01:10:34.529 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-01-13 01:10:34.529 logback [http-nio-8082-exec-7] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     当前的角色是：ROLE_GENERA
+2019-01-13 01:10:34.529 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - 拥有权限，准许使用该功能！
+2019-01-13 01:10:34.591 logback [http-nio-8082-exec-8] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:34.591 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**请求的url：/informationBefo/getShaveRecordNum
+2019-01-13 01:10:34.591 logback [http-nio-8082-exec-8] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:34.591 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login**请求的url：/informationBefo/getShaveRecordNum
+2019-01-13 01:10:34.591 logback [http-nio-8082-exec-8] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:34.592 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/per_info请求的url：/informationBefo/getShaveRecordNum
+2019-01-13 01:10:34.592 logback [http-nio-8082-exec-8] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:34.592 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/User/**请求的url：/informationBefo/getShaveRecordNum
+2019-01-13 01:10:34.592 logback [http-nio-8082-exec-8] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:34.592 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getAllplants**请求的url：/informationBefo/getShaveRecordNum
+2019-01-13 01:10:34.592 logback [http-nio-8082-exec-8] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:34.592 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getTSB_info**请求的url：/informationBefo/getShaveRecordNum
+2019-01-13 01:10:34.592 logback [http-nio-8082-exec-8] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:34.592 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/informationBefo/**请求的url：/informationBefo/getShaveRecordNum
+2019-01-13 01:10:34.592 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2019-01-13 01:10:34.592 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2019-01-13 01:10:34.592 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2019-01-13 01:10:34.592 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_ADMIN
+2019-01-13 01:10:34.592 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-01-13 01:10:34.592 logback [http-nio-8082-exec-8] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     当前的角色是：ROLE_ADMIN
+2019-01-13 01:10:34.592 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_GENERA
+2019-01-13 01:10:34.592 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-01-13 01:10:34.592 logback [http-nio-8082-exec-8] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     当前的角色是：ROLE_GENERA
+2019-01-13 01:10:34.592 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - 拥有权限，准许使用该功能！
+2019-01-13 01:10:36.233 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2019-01-13 01:10:36.234 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/informationBefo/getAllDiseaseRecord
+2019-01-13 01:10:36.234 logback [http-nio-8082-exec-10] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2019-01-13 01:10:36.234 logback [http-nio-8082-exec-10] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/informationBefo/getDiseaseRecordNum
+2019-01-13 01:10:36.415 logback [http-nio-8082-exec-10] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:36.416 logback [http-nio-8082-exec-10] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**请求的url：/informationBefo/getDiseaseRecordNum
+2019-01-13 01:10:36.416 logback [http-nio-8082-exec-10] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:36.416 logback [http-nio-8082-exec-10] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login**请求的url：/informationBefo/getDiseaseRecordNum
+2019-01-13 01:10:36.416 logback [http-nio-8082-exec-10] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:36.416 logback [http-nio-8082-exec-10] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/per_info请求的url：/informationBefo/getDiseaseRecordNum
+2019-01-13 01:10:36.416 logback [http-nio-8082-exec-10] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:36.416 logback [http-nio-8082-exec-10] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/User/**请求的url：/informationBefo/getDiseaseRecordNum
+2019-01-13 01:10:36.416 logback [http-nio-8082-exec-10] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:36.416 logback [http-nio-8082-exec-10] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getAllplants**请求的url：/informationBefo/getDiseaseRecordNum
+2019-01-13 01:10:36.416 logback [http-nio-8082-exec-10] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:36.416 logback [http-nio-8082-exec-10] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getTSB_info**请求的url：/informationBefo/getDiseaseRecordNum
+2019-01-13 01:10:36.416 logback [http-nio-8082-exec-10] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:36.416 logback [http-nio-8082-exec-10] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/informationBefo/**请求的url：/informationBefo/getDiseaseRecordNum
+2019-01-13 01:10:36.416 logback [http-nio-8082-exec-10] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2019-01-13 01:10:36.416 logback [http-nio-8082-exec-10] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2019-01-13 01:10:36.416 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2019-01-13 01:10:36.416 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_ADMIN
+2019-01-13 01:10:36.416 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-01-13 01:10:36.416 logback [http-nio-8082-exec-10] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     当前的角色是：ROLE_ADMIN
+2019-01-13 01:10:36.416 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_GENERA
+2019-01-13 01:10:36.417 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-01-13 01:10:36.417 logback [http-nio-8082-exec-10] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     当前的角色是：ROLE_GENERA
+2019-01-13 01:10:36.417 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - 拥有权限，准许使用该功能！
+2019-01-13 01:10:36.421 logback [http-nio-8082-exec-9] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:36.421 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**请求的url：/informationBefo/getAllDiseaseRecord
+2019-01-13 01:10:36.421 logback [http-nio-8082-exec-9] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:36.421 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login**请求的url：/informationBefo/getAllDiseaseRecord
+2019-01-13 01:10:36.421 logback [http-nio-8082-exec-9] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:36.421 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/per_info请求的url：/informationBefo/getAllDiseaseRecord
+2019-01-13 01:10:36.421 logback [http-nio-8082-exec-9] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:36.421 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/User/**请求的url：/informationBefo/getAllDiseaseRecord
+2019-01-13 01:10:36.421 logback [http-nio-8082-exec-9] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:36.421 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getAllplants**请求的url：/informationBefo/getAllDiseaseRecord
+2019-01-13 01:10:36.421 logback [http-nio-8082-exec-9] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:36.421 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getTSB_info**请求的url：/informationBefo/getAllDiseaseRecord
+2019-01-13 01:10:36.421 logback [http-nio-8082-exec-9] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-13 01:10:36.421 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/informationBefo/**请求的url：/informationBefo/getAllDiseaseRecord
+2019-01-13 01:10:36.421 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2019-01-13 01:10:36.421 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2019-01-13 01:10:36.421 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2019-01-13 01:10:36.421 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_GENERA
+2019-01-13 01:10:36.421 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-01-13 01:10:36.421 logback [http-nio-8082-exec-9] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     当前的角色是：ROLE_GENERA
+2019-01-13 01:10:36.421 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - 拥有权限，准许使用该功能！

@@ -1,0 +1,56 @@
+2019-01-13 11:57:27.426 logback [main] INFO  com.DemoApplication - Starting DemoApplication on PYL with PID 16812 (D:\ideaProject\farmproduceManage\target\classes started by 宇龙 in D:\ideaProject\farmproduceManage)
+2019-01-13 11:57:27.451 logback [main] INFO  com.DemoApplication - No active profile set, falling back to default profiles: default
+2019-01-13 11:57:31.564 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2019-01-13 11:57:31.578 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2019-01-13 11:57:31.591 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-01-13 11:57:31.592 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-01-13 11:57:31.603 logback [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_191\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;%QUARTUS_ROOTDIR%\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\130\DTS\Binn\;D:\MATLAB\R2016a\runtime\win64;D:\MATLAB\R2016a\bin;D:\MATLAB\R2016a\polyspace\bin;C:\Program Files\nodejs\;D:\Microsoft VS Code\bin;D:\Python\Python37\Scripts\;D:\Python\Python37\;C:\Users\宇龙\AppData\Local\Microsoft\WindowsApps;C:\mysql-5.7.17-winx64 (1)\mysql-5.7.17-winx64\bin;C:\Wind\Wind.NET.Client\WindNET\bin\;D:\apache-ant-1.9.11-bin\apache-ant-1.9.11\bin;D:\hadoop\hadoop-2.9.0\bin;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;;D:\Microsoft VS Code\bin;C:\Users\宇龙\AppData\Roaming\npm;D:\JetBrains\PyCharm Community Edition 2018.3.2\bin;;.]
+2019-01-13 11:57:31.775 logback [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-01-13 11:57:31.775 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4200 ms
+2019-01-13 11:57:31.839 logback [main] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-13 11:57:31.839 logback [main] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-13 11:57:31.839 logback [main] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2019-01-13 11:57:31.839 logback [main] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-13 11:57:31.840 logback [main] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-01-13 11:57:31.841 logback [main] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2019-01-13 11:57:32.803 logback [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fastJsonpResponseBodyAdvice' defined in URL [jar:file:/C:/Users/%e5%ae%87%e9%be%99/.m2/repository/com/alibaba/fastjson/1.2.21/fastjson-1.2.21.jar!/com/alibaba/fastjson/support/spring/FastJsonpResponseBodyAdvice.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.alibaba.fastjson.support.spring.FastJsonpResponseBodyAdvice]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException: At least one query param name is required
+2019-01-13 11:57:32.806 logback [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2019-01-13 11:57:32.837 logback [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-13 11:57:32.870 logback [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fastJsonpResponseBodyAdvice' defined in URL [jar:file:/C:/Users/%e5%ae%87%e9%be%99/.m2/repository/com/alibaba/fastjson/1.2.21/fastjson-1.2.21.jar!/com/alibaba/fastjson/support/spring/FastJsonpResponseBodyAdvice.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.alibaba.fastjson.support.spring.FastJsonpResponseBodyAdvice]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException: At least one query param name is required
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:303)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:284)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1308)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1154)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.DemoApplication.main(DemoApplication.java:12)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.alibaba.fastjson.support.spring.FastJsonpResponseBodyAdvice]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException: At least one query param name is required
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:184)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:117)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:299)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalArgumentException: At least one query param name is required
+	at org.springframework.util.Assert.isTrue(Assert.java:118)
+	at com.alibaba.fastjson.support.spring.FastJsonpResponseBodyAdvice.<init>(FastJsonpResponseBodyAdvice.java:37)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:172)
+	... 21 common frames omitted

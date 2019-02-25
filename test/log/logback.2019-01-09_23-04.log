@@ -1,0 +1,5 @@
+2019-01-09 23:04:05.688 logback [http-nio-8082-exec-8] INFO  c.p.d.S.U.impl.UserServiceimpl - 取出的username:aaa取出的password:47bce5c74f589f4867dbd57e9ca9f808
+2019-01-09 23:04:05.823 logback [http-nio-8082-exec-8] INFO  com.pyl.demo.model.USER_info - ------调用user model中的调用证书------
+2019-01-09 23:04:05.823 logback [http-nio-8082-exec-8] INFO  com.pyl.demo.model.USER_info - 此次获得的证书:[ROLE_GENERA]
+2019-01-09 23:04:05.827 logback [http-nio-8082-exec-8] INFO  c.pyl.demo.config.WebSecurityConfig - -------请求成功--------
+2019-01-09 23:04:05.828 logback [http-nio-8082-exec-8] INFO  c.pyl.demo.config.WebSecurityConfig - {"status":"success","msg":{"id":1,"username":"aaa","pwd":"47bce5c74f589f4867dbd57e9ca9f808","email":"21@qq.com","nickname":"allyn","address":"Stev. kerr","phone":"510435","img_path":null,"roles":[{"id":1,"name":"ROLE_GENERA","namezh":"普通用户"}],"enabled":true,"password":"47bce5c74f589f4867dbd57e9ca9f808","credentialsNonExpired":true,"accountNonExpired":true,"accountNonLocked":true}}

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pyl.demo.mapper.permission_infoMapper" >
+  <resultMap id="BaseResultMap" type="com.pyl.demo.model.permission_info" >
+    <id column="ID" property="id" jdbcType="INTEGER" />
+    <result column="URL" property="url" jdbcType="VARCHAR" />
+    <result column="PATH" property="path" jdbcType="VARCHAR" />
+    <result column="COMPONENT" property="component" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="ICON_CLS" property="iconCls" jdbcType="VARCHAR" />
+    <result column="KEEP_ALIVE" property="keepAlive" jdbcType="VARCHAR" />
+    <result column="REQUIRE_AUTH" property="requireAuth" jdbcType="VARCHAR" />
+    <result column="PARENT_ID" property="parentId" jdbcType="INTEGER" />
+    <collection property="roles" ofType="com.pyl.demo.model.role">
+      <id column="rid" property="id"/>
+      <result column="rname" property="name"/>
+      <result column="rnamezh" property="namezh"/>
+    </collection>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, URL, PATH, COMPONENT, NAME, ICON_CLS, KEEP_ALIVE, REQUIRE_AUTH, PARENT_ID
+  </sql>
+
+  <select id="getAllPemission" resultMap="BaseResultMap">
+    select m.*,r.ID as rid,r.NAME as rname,r.NAMEZH as rnamezh from PERMISSION m left join PERMISSION_ROLE mr
+    on m.ID = mr.PERMISSION_ID
+    left join ROLE r on mr.ROLE_ID = r.ID
+    order by m.ID
+  </select>
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from PERMISSION
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from PERMISSION
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.pyl.demo.model.permission_info" >
+    insert into PERMISSION (ID, URL, PATH, 
+      COMPONENT, NAME, ICON_CLS, 
+      KEEP_ALIVE, REQUIRE_AUTH, PARENT_ID
+      )
+    values (#{id,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR}, #{path,jdbcType=VARCHAR}, 
+      #{component,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{iconCls,jdbcType=VARCHAR}, 
+      #{keepAlive,jdbcType=VARCHAR}, #{requireAuth,jdbcType=VARCHAR}, #{parentId,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.pyl.demo.model.permission_info" >
+    insert into PERMISSION
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="url != null" >
+        URL,
+      </if>
+      <if test="path != null" >
+        PATH,
+      </if>
+      <if test="component != null" >
+        COMPONENT,
+      </if>
+      <if test="name != null" >
+        NAME,
+      </if>
+      <if test="iconCls != null" >
+        ICON_CLS,
+      </if>
+      <if test="keepAlive != null" >
+        KEEP_ALIVE,
+      </if>
+      <if test="requireAuth != null" >
+        REQUIRE_AUTH,
+      </if>
+      <if test="parentId != null" >
+        PARENT_ID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="url != null" >
+        #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="path != null" >
+        #{path,jdbcType=VARCHAR},
+      </if>
+      <if test="component != null" >
+        #{component,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="iconCls != null" >
+        #{iconCls,jdbcType=VARCHAR},
+      </if>
+      <if test="keepAlive != null" >
+        #{keepAlive,jdbcType=VARCHAR},
+      </if>
+      <if test="requireAuth != null" >
+        #{requireAuth,jdbcType=VARCHAR},
+      </if>
+      <if test="parentId != null" >
+        #{parentId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.pyl.demo.model.permission_info" >
+    update PERMISSION
+    <set >
+      <if test="url != null" >
+        URL = #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="path != null" >
+        PATH = #{path,jdbcType=VARCHAR},
+      </if>
+      <if test="component != null" >
+        COMPONENT = #{component,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        NAME = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="iconCls != null" >
+        ICON_CLS = #{iconCls,jdbcType=VARCHAR},
+      </if>
+      <if test="keepAlive != null" >
+        KEEP_ALIVE = #{keepAlive,jdbcType=VARCHAR},
+      </if>
+      <if test="requireAuth != null" >
+        REQUIRE_AUTH = #{requireAuth,jdbcType=VARCHAR},
+      </if>
+      <if test="parentId != null" >
+        PARENT_ID = #{parentId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.pyl.demo.model.permission_info" >
+    update PERMISSION
+    set URL = #{url,jdbcType=VARCHAR},
+      PATH = #{path,jdbcType=VARCHAR},
+      COMPONENT = #{component,jdbcType=VARCHAR},
+      NAME = #{name,jdbcType=VARCHAR},
+      ICON_CLS = #{iconCls,jdbcType=VARCHAR},
+      KEEP_ALIVE = #{keepAlive,jdbcType=VARCHAR},
+      REQUIRE_AUTH = #{requireAuth,jdbcType=VARCHAR},
+      PARENT_ID = #{parentId,jdbcType=INTEGER}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

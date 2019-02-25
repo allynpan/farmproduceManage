@@ -1,0 +1,39 @@
+2019-01-14 23:48:31.742 logback [http-nio-8082-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-01-14 23:48:31.755 logback [http-nio-8082-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-01-14 23:48:31.776 logback [http-nio-8082-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 21 ms
+2019-01-14 23:48:31.859 logback [http-nio-8082-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - test - Starting...
+2019-01-14 23:48:32.340 logback [http-nio-8082-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - test - Start completed.
+2019-01-14 23:48:32.465 logback [http-nio-8082-exec-2] INFO  c.p.d.S.U.impl.UserServiceimpl - 取出的username:aaa取出的password:47bce5c74f589f4867dbd57e9ca9f808
+2019-01-14 23:48:32.496 logback [http-nio-8082-exec-2] INFO  com.pyl.demo.model.USER_info - ------调用user model中的调用证书------
+2019-01-14 23:48:32.497 logback [http-nio-8082-exec-2] INFO  com.pyl.demo.model.USER_info - 此次获得的证书:[ROLE_GENERA]
+2019-01-14 23:48:32.600 logback [http-nio-8082-exec-2] INFO  c.pyl.demo.config.WebSecurityConfig - -------请求成功--------
+2019-01-14 23:48:32.600 logback [http-nio-8082-exec-2] INFO  c.pyl.demo.config.WebSecurityConfig - {"status":"success","msg":{"id":1,"username":"aaa","pwd":"47bce5c74f589f4867dbd57e9ca9f808","email":"21@qq.com","nickname":"allyn","address":"Stev. kerr","phone":"510435","img_path":null,"roles":[{"id":1,"name":"ROLE_GENERA","namezh":"普通用户"}],"enabled":true,"password":"47bce5c74f589f4867dbd57e9ca9f808","credentialsNonExpired":true,"accountNonExpired":true,"accountNonLocked":true}}
+2019-01-14 23:48:41.214 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2019-01-14 23:48:41.214 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/informationBefo/insertDisease
+2019-01-14 23:48:41.250 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-14 23:48:41.250 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**请求的url：/informationBefo/insertDisease
+2019-01-14 23:48:41.250 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-14 23:48:41.250 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login**请求的url：/informationBefo/insertDisease
+2019-01-14 23:48:41.250 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-14 23:48:41.250 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/per_info请求的url：/informationBefo/insertDisease
+2019-01-14 23:48:41.250 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-14 23:48:41.250 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/User/**请求的url：/informationBefo/insertDisease
+2019-01-14 23:48:41.251 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-14 23:48:41.251 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getAllplants**请求的url：/informationBefo/insertDisease
+2019-01-14 23:48:41.251 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-14 23:48:41.251 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getTSB_info**请求的url：/informationBefo/insertDisease
+2019-01-14 23:48:41.251 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-01-14 23:48:41.251 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/informationBefo/**请求的url：/informationBefo/insertDisease
+2019-01-14 23:48:41.251 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2019-01-14 23:48:41.251 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2019-01-14 23:48:41.251 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2019-01-14 23:48:41.251 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_ADMIN
+2019-01-14 23:48:41.251 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-01-14 23:48:41.251 logback [http-nio-8082-exec-4] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     当前的角色是：ROLE_ADMIN
+2019-01-14 23:48:41.251 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_GENERA
+2019-01-14 23:48:41.252 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-01-14 23:48:41.252 logback [http-nio-8082-exec-4] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     当前的角色是：ROLE_GENERA
+2019-01-14 23:48:41.252 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - 拥有权限，准许使用该功能！
+2019-01-14 23:48:41.340 logback [http-nio-8082-exec-4] INFO  com.pyl.demo.Util.UTCtoDate - date:2019-01-13T16:00:00.000 UTC
+2019-01-14 23:48:41.346 logback [http-nio-8082-exec-4] INFO  com.pyl.demo.Util.UTCtoDate - d:Mon Jan 14 00:00:00 CST 2019
+2019-01-14 23:48:49.282 logback [http-nio-8082-exec-4] INFO  c.p.demo.Controller.InfoMaComtroller - protectTime:

@@ -1,0 +1,331 @@
+2019-02-08 21:37:17.872 logback [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-02-08 21:37:17.880 logback [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-02-08 21:37:17.894 logback [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2019-02-08 21:37:17.981 logback [http-nio-8082-exec-1] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1,test} inited
+2019-02-08 21:37:19.508 logback [http-nio-8082-exec-1] INFO  c.p.d.S.U.impl.UserServiceimpl - 取出的username:aaa取出的password:47bce5c74f589f4867dbd57e9ca9f808
+2019-02-08 21:37:19.574 logback [http-nio-8082-exec-1] INFO  com.pyl.demo.model.USER_info - ------调用user model中的调用证书------
+2019-02-08 21:37:19.574 logback [http-nio-8082-exec-1] INFO  com.pyl.demo.model.USER_info - 此次获得的证书:[ROLE_GENERA]
+2019-02-08 21:37:19.646 logback [http-nio-8082-exec-1] INFO  c.pyl.demo.config.WebSecurityConfig - -------请求成功--------
+2019-02-08 21:37:19.646 logback [http-nio-8082-exec-1] INFO  c.pyl.demo.config.WebSecurityConfig - {"status":"success","msg":{"id":1,"username":"aaa","pwd":"47bce5c74f589f4867dbd57e9ca9f808","email":"21@qq.com","nickname":"allyn","address":"Stev. kerr","phone":"510435","img_path":null,"roles":[{"id":1,"name":"ROLE_GENERA","namezh":"普通用户"}],"password":"47bce5c74f589f4867dbd57e9ca9f808","credentialsNonExpired":true,"accountNonExpired":true,"accountNonLocked":true,"enabled":true}}
+2019-02-08 21:37:24.421 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2019-02-08 21:37:24.422 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/informationBefo/getPlantAndPlace?pageNum=1&pageSize=2&username=aaa
+2019-02-08 21:37:24.599 logback [http-nio-8082-exec-3] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:24.599 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**
+2019-02-08 21:37:24.600 logback [http-nio-8082-exec-3] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:24.600 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login**
+2019-02-08 21:37:24.600 logback [http-nio-8082-exec-3] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:24.600 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/per_info
+2019-02-08 21:37:24.600 logback [http-nio-8082-exec-3] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:24.600 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/User/**
+2019-02-08 21:37:24.600 logback [http-nio-8082-exec-3] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:24.600 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getAllplants**
+2019-02-08 21:37:24.600 logback [http-nio-8082-exec-3] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:24.600 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getTSB_info**
+2019-02-08 21:37:24.600 logback [http-nio-8082-exec-3] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:24.600 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/informationBefo/**
+2019-02-08 21:37:24.600 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2019-02-08 21:37:24.600 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2019-02-08 21:37:24.601 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2019-02-08 21:37:24.601 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - 该次url需要的角色：ROLE_ADMIN
+2019-02-08 21:37:24.601 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - 输出证书：[ROLE_GENERA]
+2019-02-08 21:37:24.601 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - org.springframework.security.authentication.UsernamePasswordAuthenticationToken@83aa62f5: Principal: com.pyl.demo.model.USER_info@4a2331b8; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_GENERA
+2019-02-08 21:37:24.601 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-02-08 21:37:24.602 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - auth name:aaa
+2019-02-08 21:37:24.602 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - auth principal:com.pyl.demo.model.USER_info@4a2331b8
+2019-02-08 21:37:24.602 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - auth datails:org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null
+2019-02-08 21:37:24.602 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - auth credentials:null
+2019-02-08 21:37:24.602 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - auth authorities:[ROLE_GENERA]
+2019-02-08 21:37:24.602 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     url需要的角色是：ROLE_ADMIN
+2019-02-08 21:37:24.602 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - 该次url需要的角色：ROLE_GENERA
+2019-02-08 21:37:24.605 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - 输出证书：[ROLE_GENERA]
+2019-02-08 21:37:24.605 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - org.springframework.security.authentication.UsernamePasswordAuthenticationToken@83aa62f5: Principal: com.pyl.demo.model.USER_info@4a2331b8; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_GENERA
+2019-02-08 21:37:24.606 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-02-08 21:37:24.606 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - auth name:aaa
+2019-02-08 21:37:24.606 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - auth principal:com.pyl.demo.model.USER_info@4a2331b8
+2019-02-08 21:37:24.606 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - auth datails:org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null
+2019-02-08 21:37:24.606 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - auth credentials:null
+2019-02-08 21:37:24.606 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - auth authorities:[ROLE_GENERA]
+2019-02-08 21:37:24.606 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     url需要的角色是：ROLE_GENERA
+2019-02-08 21:37:24.606 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - 拥有权限，准许使用该功能！
+2019-02-08 21:37:24.686 logback [http-nio-8082-exec-3] INFO  c.p.demo.Controller.InfoMaComtroller - pageNum:1pageSize:2username:aaa
+2019-02-08 21:37:30.604 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2019-02-08 21:37:30.604 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/informationBefo/getAllPlantRecord?pageNum=1&pageSize=2&username=aaa
+2019-02-08 21:37:30.707 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:30.707 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**
+2019-02-08 21:37:30.707 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:30.707 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login**
+2019-02-08 21:37:30.707 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:30.707 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/per_info
+2019-02-08 21:37:30.707 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:30.707 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/User/**
+2019-02-08 21:37:30.707 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:30.707 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getAllplants**
+2019-02-08 21:37:30.708 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:30.708 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getTSB_info**
+2019-02-08 21:37:30.708 logback [http-nio-8082-exec-4] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:30.708 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/informationBefo/**
+2019-02-08 21:37:30.708 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2019-02-08 21:37:30.708 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2019-02-08 21:37:30.708 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2019-02-08 21:37:30.708 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - 该次url需要的角色：ROLE_ADMIN
+2019-02-08 21:37:30.708 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - 输出证书：[ROLE_GENERA]
+2019-02-08 21:37:30.708 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - org.springframework.security.authentication.UsernamePasswordAuthenticationToken@83aa62f5: Principal: com.pyl.demo.model.USER_info@4a2331b8; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_GENERA
+2019-02-08 21:37:30.708 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-02-08 21:37:30.708 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - auth name:aaa
+2019-02-08 21:37:30.708 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - auth principal:com.pyl.demo.model.USER_info@4a2331b8
+2019-02-08 21:37:30.708 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - auth datails:org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null
+2019-02-08 21:37:30.708 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - auth credentials:null
+2019-02-08 21:37:30.708 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - auth authorities:[ROLE_GENERA]
+2019-02-08 21:37:30.709 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     url需要的角色是：ROLE_ADMIN
+2019-02-08 21:37:30.709 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - 该次url需要的角色：ROLE_GENERA
+2019-02-08 21:37:30.709 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - 输出证书：[ROLE_GENERA]
+2019-02-08 21:37:30.709 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - org.springframework.security.authentication.UsernamePasswordAuthenticationToken@83aa62f5: Principal: com.pyl.demo.model.USER_info@4a2331b8; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_GENERA
+2019-02-08 21:37:30.709 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-02-08 21:37:30.709 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - auth name:aaa
+2019-02-08 21:37:30.709 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - auth principal:com.pyl.demo.model.USER_info@4a2331b8
+2019-02-08 21:37:30.709 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - auth datails:org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null
+2019-02-08 21:37:30.709 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - auth credentials:null
+2019-02-08 21:37:30.709 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - auth authorities:[ROLE_GENERA]
+2019-02-08 21:37:30.709 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     url需要的角色是：ROLE_GENERA
+2019-02-08 21:37:30.709 logback [http-nio-8082-exec-4] INFO  c.p.d.c.UrlAccessDecisionManager - 拥有权限，准许使用该功能！
+2019-02-08 21:37:30.711 logback [http-nio-8082-exec-4] INFO  c.p.demo.Controller.InfoMaComtroller - pageNum:1pageSize:2
+2019-02-08 21:37:34.539 logback [http-nio-8082-exec-5] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2019-02-08 21:37:34.539 logback [http-nio-8082-exec-5] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/informationBefo/getAllShaveRecord?pageNum=1&pageSize=2&username=aaa
+2019-02-08 21:37:34.630 logback [http-nio-8082-exec-5] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:34.630 logback [http-nio-8082-exec-5] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**
+2019-02-08 21:37:34.631 logback [http-nio-8082-exec-5] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:34.631 logback [http-nio-8082-exec-5] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login**
+2019-02-08 21:37:34.631 logback [http-nio-8082-exec-5] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:34.631 logback [http-nio-8082-exec-5] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/per_info
+2019-02-08 21:37:34.631 logback [http-nio-8082-exec-5] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:34.631 logback [http-nio-8082-exec-5] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/User/**
+2019-02-08 21:37:34.631 logback [http-nio-8082-exec-5] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:34.631 logback [http-nio-8082-exec-5] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getAllplants**
+2019-02-08 21:37:34.631 logback [http-nio-8082-exec-5] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:34.631 logback [http-nio-8082-exec-5] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getTSB_info**
+2019-02-08 21:37:34.631 logback [http-nio-8082-exec-5] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:34.631 logback [http-nio-8082-exec-5] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/informationBefo/**
+2019-02-08 21:37:34.631 logback [http-nio-8082-exec-5] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2019-02-08 21:37:34.631 logback [http-nio-8082-exec-5] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2019-02-08 21:37:34.631 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2019-02-08 21:37:34.632 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - 该次url需要的角色：ROLE_ADMIN
+2019-02-08 21:37:34.632 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - 输出证书：[ROLE_GENERA]
+2019-02-08 21:37:34.632 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - org.springframework.security.authentication.UsernamePasswordAuthenticationToken@83aa62f5: Principal: com.pyl.demo.model.USER_info@4a2331b8; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_GENERA
+2019-02-08 21:37:34.632 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-02-08 21:37:34.632 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - auth name:aaa
+2019-02-08 21:37:34.632 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - auth principal:com.pyl.demo.model.USER_info@4a2331b8
+2019-02-08 21:37:34.632 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - auth datails:org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null
+2019-02-08 21:37:34.632 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - auth credentials:null
+2019-02-08 21:37:34.632 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - auth authorities:[ROLE_GENERA]
+2019-02-08 21:37:34.632 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     url需要的角色是：ROLE_ADMIN
+2019-02-08 21:37:34.632 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - 该次url需要的角色：ROLE_GENERA
+2019-02-08 21:37:34.635 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - 输出证书：[ROLE_GENERA]
+2019-02-08 21:37:34.635 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - org.springframework.security.authentication.UsernamePasswordAuthenticationToken@83aa62f5: Principal: com.pyl.demo.model.USER_info@4a2331b8; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_GENERA
+2019-02-08 21:37:34.636 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-02-08 21:37:34.636 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - auth name:aaa
+2019-02-08 21:37:34.636 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - auth principal:com.pyl.demo.model.USER_info@4a2331b8
+2019-02-08 21:37:34.636 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - auth datails:org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null
+2019-02-08 21:37:34.636 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - auth credentials:null
+2019-02-08 21:37:34.636 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - auth authorities:[ROLE_GENERA]
+2019-02-08 21:37:34.636 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     url需要的角色是：ROLE_GENERA
+2019-02-08 21:37:34.636 logback [http-nio-8082-exec-5] INFO  c.p.d.c.UrlAccessDecisionManager - 拥有权限，准许使用该功能！
+2019-02-08 21:37:38.459 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2019-02-08 21:37:38.459 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/informationBefo/getShaveRecordNum?username=aaa
+2019-02-08 21:37:38.659 logback [http-nio-8082-exec-6] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:38.659 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**
+2019-02-08 21:37:38.659 logback [http-nio-8082-exec-6] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:38.659 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login**
+2019-02-08 21:37:38.659 logback [http-nio-8082-exec-6] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:38.659 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/per_info
+2019-02-08 21:37:38.659 logback [http-nio-8082-exec-6] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:38.659 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/User/**
+2019-02-08 21:37:38.659 logback [http-nio-8082-exec-6] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:38.659 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getAllplants**
+2019-02-08 21:37:38.659 logback [http-nio-8082-exec-6] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:38.659 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getTSB_info**
+2019-02-08 21:37:38.660 logback [http-nio-8082-exec-6] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:38.660 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/informationBefo/**
+2019-02-08 21:37:38.660 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2019-02-08 21:37:38.660 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2019-02-08 21:37:38.660 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2019-02-08 21:37:38.660 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 该次url需要的角色：ROLE_ADMIN
+2019-02-08 21:37:38.660 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 输出证书：[ROLE_GENERA]
+2019-02-08 21:37:38.660 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - org.springframework.security.authentication.UsernamePasswordAuthenticationToken@83aa62f5: Principal: com.pyl.demo.model.USER_info@4a2331b8; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_GENERA
+2019-02-08 21:37:38.660 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-02-08 21:37:38.660 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - auth name:aaa
+2019-02-08 21:37:38.661 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - auth principal:com.pyl.demo.model.USER_info@4a2331b8
+2019-02-08 21:37:38.661 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - auth datails:org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null
+2019-02-08 21:37:38.661 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - auth credentials:null
+2019-02-08 21:37:38.661 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - auth authorities:[ROLE_GENERA]
+2019-02-08 21:37:38.661 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     url需要的角色是：ROLE_ADMIN
+2019-02-08 21:37:38.661 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 该次url需要的角色：ROLE_GENERA
+2019-02-08 21:37:38.661 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 输出证书：[ROLE_GENERA]
+2019-02-08 21:37:38.661 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - org.springframework.security.authentication.UsernamePasswordAuthenticationToken@83aa62f5: Principal: com.pyl.demo.model.USER_info@4a2331b8; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_GENERA
+2019-02-08 21:37:38.661 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-02-08 21:37:38.661 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - auth name:aaa
+2019-02-08 21:37:38.661 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - auth principal:com.pyl.demo.model.USER_info@4a2331b8
+2019-02-08 21:37:38.661 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - auth datails:org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null
+2019-02-08 21:37:38.661 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - auth credentials:null
+2019-02-08 21:37:38.661 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - auth authorities:[ROLE_GENERA]
+2019-02-08 21:37:38.661 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     url需要的角色是：ROLE_GENERA
+2019-02-08 21:37:38.661 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 拥有权限，准许使用该功能！
+2019-02-08 21:37:41.302 logback [http-nio-8082-exec-7] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2019-02-08 21:37:41.302 logback [http-nio-8082-exec-7] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/informationBefo/getAllDiseaseRecord?pageNum=1&pageSize=2&username=aaa
+2019-02-08 21:37:41.421 logback [http-nio-8082-exec-7] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:41.422 logback [http-nio-8082-exec-7] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**
+2019-02-08 21:37:41.422 logback [http-nio-8082-exec-7] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:41.423 logback [http-nio-8082-exec-7] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login**
+2019-02-08 21:37:41.423 logback [http-nio-8082-exec-7] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:41.424 logback [http-nio-8082-exec-7] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/per_info
+2019-02-08 21:37:41.424 logback [http-nio-8082-exec-7] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:41.425 logback [http-nio-8082-exec-7] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/User/**
+2019-02-08 21:37:41.425 logback [http-nio-8082-exec-7] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:41.425 logback [http-nio-8082-exec-7] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getAllplants**
+2019-02-08 21:37:41.425 logback [http-nio-8082-exec-7] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:41.425 logback [http-nio-8082-exec-7] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getTSB_info**
+2019-02-08 21:37:41.425 logback [http-nio-8082-exec-7] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:41.425 logback [http-nio-8082-exec-7] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/informationBefo/**
+2019-02-08 21:37:41.425 logback [http-nio-8082-exec-7] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2019-02-08 21:37:41.425 logback [http-nio-8082-exec-7] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2019-02-08 21:37:41.425 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2019-02-08 21:37:41.425 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - 该次url需要的角色：ROLE_ADMIN
+2019-02-08 21:37:41.425 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - 输出证书：[ROLE_GENERA]
+2019-02-08 21:37:41.425 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - org.springframework.security.authentication.UsernamePasswordAuthenticationToken@83aa62f5: Principal: com.pyl.demo.model.USER_info@4a2331b8; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_GENERA
+2019-02-08 21:37:41.425 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-02-08 21:37:41.426 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - auth name:aaa
+2019-02-08 21:37:41.426 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - auth principal:com.pyl.demo.model.USER_info@4a2331b8
+2019-02-08 21:37:41.426 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - auth datails:org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null
+2019-02-08 21:37:41.426 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - auth credentials:null
+2019-02-08 21:37:41.426 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - auth authorities:[ROLE_GENERA]
+2019-02-08 21:37:41.426 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     url需要的角色是：ROLE_ADMIN
+2019-02-08 21:37:41.426 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - 该次url需要的角色：ROLE_GENERA
+2019-02-08 21:37:41.426 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - 输出证书：[ROLE_GENERA]
+2019-02-08 21:37:41.426 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - org.springframework.security.authentication.UsernamePasswordAuthenticationToken@83aa62f5: Principal: com.pyl.demo.model.USER_info@4a2331b8; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_GENERA
+2019-02-08 21:37:41.426 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-02-08 21:37:41.426 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - auth name:aaa
+2019-02-08 21:37:41.426 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - auth principal:com.pyl.demo.model.USER_info@4a2331b8
+2019-02-08 21:37:41.426 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - auth datails:org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null
+2019-02-08 21:37:41.426 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - auth credentials:null
+2019-02-08 21:37:41.426 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - auth authorities:[ROLE_GENERA]
+2019-02-08 21:37:41.426 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     url需要的角色是：ROLE_GENERA
+2019-02-08 21:37:41.427 logback [http-nio-8082-exec-7] INFO  c.p.d.c.UrlAccessDecisionManager - 拥有权限，准许使用该功能！
+2019-02-08 21:37:46.098 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2019-02-08 21:37:46.101 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/informationBefo/getDiseaseRecordNum?username=aaa
+2019-02-08 21:37:46.261 logback [http-nio-8082-exec-8] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:46.261 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**
+2019-02-08 21:37:46.261 logback [http-nio-8082-exec-8] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:46.261 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login**
+2019-02-08 21:37:46.261 logback [http-nio-8082-exec-8] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:46.261 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/per_info
+2019-02-08 21:37:46.261 logback [http-nio-8082-exec-8] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:46.261 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/User/**
+2019-02-08 21:37:46.261 logback [http-nio-8082-exec-8] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:46.261 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getAllplants**
+2019-02-08 21:37:46.261 logback [http-nio-8082-exec-8] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:46.261 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getTSB_info**
+2019-02-08 21:37:46.262 logback [http-nio-8082-exec-8] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:46.262 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/informationBefo/**
+2019-02-08 21:37:46.262 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2019-02-08 21:37:46.262 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2019-02-08 21:37:46.262 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2019-02-08 21:37:46.262 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - 该次url需要的角色：ROLE_ADMIN
+2019-02-08 21:37:46.262 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - 输出证书：[ROLE_GENERA]
+2019-02-08 21:37:46.262 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - org.springframework.security.authentication.UsernamePasswordAuthenticationToken@83aa62f5: Principal: com.pyl.demo.model.USER_info@4a2331b8; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_GENERA
+2019-02-08 21:37:46.262 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-02-08 21:37:46.262 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - auth name:aaa
+2019-02-08 21:37:46.262 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - auth principal:com.pyl.demo.model.USER_info@4a2331b8
+2019-02-08 21:37:46.262 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - auth datails:org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null
+2019-02-08 21:37:46.262 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - auth credentials:null
+2019-02-08 21:37:46.262 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - auth authorities:[ROLE_GENERA]
+2019-02-08 21:37:46.262 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     url需要的角色是：ROLE_ADMIN
+2019-02-08 21:37:46.263 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - 该次url需要的角色：ROLE_GENERA
+2019-02-08 21:37:46.263 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - 输出证书：[ROLE_GENERA]
+2019-02-08 21:37:46.263 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - org.springframework.security.authentication.UsernamePasswordAuthenticationToken@83aa62f5: Principal: com.pyl.demo.model.USER_info@4a2331b8; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_GENERA
+2019-02-08 21:37:46.263 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-02-08 21:37:46.263 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - auth name:aaa
+2019-02-08 21:37:46.263 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - auth principal:com.pyl.demo.model.USER_info@4a2331b8
+2019-02-08 21:37:46.263 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - auth datails:org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null
+2019-02-08 21:37:46.263 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - auth credentials:null
+2019-02-08 21:37:46.263 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - auth authorities:[ROLE_GENERA]
+2019-02-08 21:37:46.263 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     url需要的角色是：ROLE_GENERA
+2019-02-08 21:37:46.263 logback [http-nio-8082-exec-8] INFO  c.p.d.c.UrlAccessDecisionManager - 拥有权限，准许使用该功能！
+2019-02-08 21:37:48.820 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2019-02-08 21:37:48.821 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/informationBefo/getAllPreserveRecord?pageNum=1&pageSize=2&username=aaa
+2019-02-08 21:37:49.006 logback [http-nio-8082-exec-9] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:49.006 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**
+2019-02-08 21:37:49.006 logback [http-nio-8082-exec-9] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:49.006 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login**
+2019-02-08 21:37:49.006 logback [http-nio-8082-exec-9] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:49.006 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/per_info
+2019-02-08 21:37:49.007 logback [http-nio-8082-exec-9] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:49.007 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/User/**
+2019-02-08 21:37:49.007 logback [http-nio-8082-exec-9] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:49.007 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getAllplants**
+2019-02-08 21:37:49.007 logback [http-nio-8082-exec-9] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:49.007 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getTSB_info**
+2019-02-08 21:37:49.007 logback [http-nio-8082-exec-9] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:49.007 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/informationBefo/**
+2019-02-08 21:37:49.007 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2019-02-08 21:37:49.007 logback [http-nio-8082-exec-9] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2019-02-08 21:37:49.007 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2019-02-08 21:37:49.007 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - 该次url需要的角色：ROLE_ADMIN
+2019-02-08 21:37:49.007 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - 输出证书：[ROLE_GENERA]
+2019-02-08 21:37:49.007 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - org.springframework.security.authentication.UsernamePasswordAuthenticationToken@83aa62f5: Principal: com.pyl.demo.model.USER_info@4a2331b8; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_GENERA
+2019-02-08 21:37:49.008 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-02-08 21:37:49.008 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - auth name:aaa
+2019-02-08 21:37:49.008 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - auth principal:com.pyl.demo.model.USER_info@4a2331b8
+2019-02-08 21:37:49.008 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - auth datails:org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null
+2019-02-08 21:37:49.008 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - auth credentials:null
+2019-02-08 21:37:49.008 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - auth authorities:[ROLE_GENERA]
+2019-02-08 21:37:49.008 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     url需要的角色是：ROLE_ADMIN
+2019-02-08 21:37:49.008 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - 该次url需要的角色：ROLE_GENERA
+2019-02-08 21:37:49.008 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - 输出证书：[ROLE_GENERA]
+2019-02-08 21:37:49.008 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - org.springframework.security.authentication.UsernamePasswordAuthenticationToken@83aa62f5: Principal: com.pyl.demo.model.USER_info@4a2331b8; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_GENERA
+2019-02-08 21:37:49.010 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-02-08 21:37:49.010 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - auth name:aaa
+2019-02-08 21:37:49.010 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - auth principal:com.pyl.demo.model.USER_info@4a2331b8
+2019-02-08 21:37:49.010 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - auth datails:org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null
+2019-02-08 21:37:49.010 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - auth credentials:null
+2019-02-08 21:37:49.010 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - auth authorities:[ROLE_GENERA]
+2019-02-08 21:37:49.010 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     url需要的角色是：ROLE_GENERA
+2019-02-08 21:37:49.010 logback [http-nio-8082-exec-9] INFO  c.p.d.c.UrlAccessDecisionManager - 拥有权限，准许使用该功能！
+2019-02-08 21:37:51.164 logback [http-nio-8082-exec-10] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2019-02-08 21:37:51.164 logback [http-nio-8082-exec-10] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/informationBefo/getPreserveNum?username=aaa
+2019-02-08 21:37:51.279 logback [http-nio-8082-exec-10] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:51.279 logback [http-nio-8082-exec-10] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**
+2019-02-08 21:37:51.279 logback [http-nio-8082-exec-10] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:51.279 logback [http-nio-8082-exec-10] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login**
+2019-02-08 21:37:51.279 logback [http-nio-8082-exec-10] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:51.279 logback [http-nio-8082-exec-10] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/per_info
+2019-02-08 21:37:51.279 logback [http-nio-8082-exec-10] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:51.279 logback [http-nio-8082-exec-10] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/User/**
+2019-02-08 21:37:51.279 logback [http-nio-8082-exec-10] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:51.279 logback [http-nio-8082-exec-10] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getAllplants**
+2019-02-08 21:37:51.279 logback [http-nio-8082-exec-10] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:51.279 logback [http-nio-8082-exec-10] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getTSB_info**
+2019-02-08 21:37:51.279 logback [http-nio-8082-exec-10] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2019-02-08 21:37:51.279 logback [http-nio-8082-exec-10] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/informationBefo/**
+2019-02-08 21:37:51.279 logback [http-nio-8082-exec-10] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2019-02-08 21:37:51.280 logback [http-nio-8082-exec-10] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2019-02-08 21:37:51.280 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2019-02-08 21:37:51.280 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - 该次url需要的角色：ROLE_ADMIN
+2019-02-08 21:37:51.280 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - 输出证书：[ROLE_GENERA]
+2019-02-08 21:37:51.281 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - org.springframework.security.authentication.UsernamePasswordAuthenticationToken@83aa62f5: Principal: com.pyl.demo.model.USER_info@4a2331b8; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_GENERA
+2019-02-08 21:37:51.281 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-02-08 21:37:51.281 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - auth name:aaa
+2019-02-08 21:37:51.281 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - auth principal:com.pyl.demo.model.USER_info@4a2331b8
+2019-02-08 21:37:51.281 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - auth datails:org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null
+2019-02-08 21:37:51.281 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - auth credentials:null
+2019-02-08 21:37:51.281 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - auth authorities:[ROLE_GENERA]
+2019-02-08 21:37:51.281 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     url需要的角色是：ROLE_ADMIN
+2019-02-08 21:37:51.281 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - 该次url需要的角色：ROLE_GENERA
+2019-02-08 21:37:51.281 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - 输出证书：[ROLE_GENERA]
+2019-02-08 21:37:51.281 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - org.springframework.security.authentication.UsernamePasswordAuthenticationToken@83aa62f5: Principal: com.pyl.demo.model.USER_info@4a2331b8; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_GENERA
+2019-02-08 21:37:51.281 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2019-02-08 21:37:51.281 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - auth name:aaa
+2019-02-08 21:37:51.281 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - auth principal:com.pyl.demo.model.USER_info@4a2331b8
+2019-02-08 21:37:51.281 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - auth datails:org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null
+2019-02-08 21:37:51.281 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - auth credentials:null
+2019-02-08 21:37:51.282 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - auth authorities:[ROLE_GENERA]
+2019-02-08 21:37:51.282 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     url需要的角色是：ROLE_GENERA
+2019-02-08 21:37:51.282 logback [http-nio-8082-exec-10] INFO  c.p.d.c.UrlAccessDecisionManager - 拥有权限，准许使用该功能！

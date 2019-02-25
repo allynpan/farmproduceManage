@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pyl.demo.mapper.TECHB_infoMapper" >
+  <resultMap id="BaseResultMap" type="com.pyl.demo.model.TECHB_info" >
+    <id column="ID" property="id" jdbcType="INTEGER" />
+    <result column="PLANT_NAME" property="plantName" jdbcType="VARCHAR" />
+    <result column="SUITABLE_TEM" property="suitableTem" jdbcType="VARCHAR" />
+    <result column="SUITABLE_LIGHT" property="suitableLight" jdbcType="VARCHAR" />
+    <result column="SUITABLE_LAND" property="suitableLand" jdbcType="VARCHAR" />
+    <result column="SUITABLE_WATER" property="suitableWater" jdbcType="VARCHAR" />
+    <result column="SHOOT_TIME" property="shootTime" jdbcType="VARCHAR" />
+    <result column="SHOOT_STATUE" property="shootStatue" jdbcType="VARCHAR" />
+    <result column="BLOSSOM_TIME" property="blossomTime" jdbcType="VARCHAR" />
+    <result column="BLOSSOM_STATUE" property="blossomStatue" jdbcType="VARCHAR" />
+    <result column="FRUIT_TIME" property="fruitTime" jdbcType="VARCHAR" />
+    <result column="FRUIT_STATUE" property="fruitStatue" jdbcType="VARCHAR" />
+    <result column="MATURE_TIME" property="matureTime" jdbcType="VARCHAR" />
+    <result column="MATURE_STATUE" property="matureStatue" jdbcType="VARCHAR" />
+    <result column="REMARK" property="remark" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, PLANT_NAME, SUITABLE_TEM, SUITABLE_LIGHT, SUITABLE_LAND, SUITABLE_WATER, SHOOT_TIME, 
+    SHOOT_STATUE, BLOSSOM_TIME, BLOSSOM_STATUE, FRUIT_TIME, FRUIT_STATUE, MATURE_TIME, 
+    MATURE_STATUE,REMARK
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from TECHSERV_BEFORE
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectIDByname" resultType="java.lang.Integer">
+    select
+    ID
+    from TECHSERV_BEFORE
+    where PLANT_NAME = #{plantName,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from TECHSERV_BEFORE
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from TECHSERV_BEFORE
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.pyl.demo.model.TECHB_info" >
+    insert into TECHSERV_BEFORE (ID, PLANT_NAME, SUITABLE_TEM, 
+      SUITABLE_LIGHT, SUITABLE_LAND, SUITABLE_WATER, 
+      SHOOT_TIME, SHOOT_STATUE, BLOSSOM_TIME, 
+      BLOSSOM_STATUE, FRUIT_TIME, FRUIT_STATUE, 
+      MATURE_TIME, MATURE_STATUE)
+    values (#{id,jdbcType=INTEGER}, #{plantName,jdbcType=VARCHAR}, #{suitableTem,jdbcType=VARCHAR}, 
+      #{suitableLight,jdbcType=VARCHAR}, #{suitableLand,jdbcType=VARCHAR}, #{suitableWater,jdbcType=VARCHAR}, 
+      #{shootTime,jdbcType=VARCHAR}, #{shootStatue,jdbcType=VARCHAR}, #{blossomTime,jdbcType=VARCHAR}, 
+      #{blossomStatue,jdbcType=VARCHAR}, #{fruitTime,jdbcType=VARCHAR}, #{fruitStatue,jdbcType=VARCHAR}, 
+      #{matureTime,jdbcType=VARCHAR}, #{matureStatue,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.pyl.demo.model.TECHB_info" >
+    insert into TECHSERV_BEFORE
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="plantName != null" >
+        PLANT_NAME,
+      </if>
+      <if test="suitableTem != null" >
+        SUITABLE_TEM,
+      </if>
+      <if test="suitableLight != null" >
+        SUITABLE_LIGHT,
+      </if>
+      <if test="suitableLand != null" >
+        SUITABLE_LAND,
+      </if>
+      <if test="suitableWater != null" >
+        SUITABLE_WATER,
+      </if>
+      <if test="shootTime != null" >
+        SHOOT_TIME,
+      </if>
+      <if test="shootStatue != null" >
+        SHOOT_STATUE,
+      </if>
+      <if test="blossomTime != null" >
+        BLOSSOM_TIME,
+      </if>
+      <if test="blossomStatue != null" >
+        BLOSSOM_STATUE,
+      </if>
+      <if test="fruitTime != null" >
+        FRUIT_TIME,
+      </if>
+      <if test="fruitStatue != null" >
+        FRUIT_STATUE,
+      </if>
+      <if test="matureTime != null" >
+        MATURE_TIME,
+      </if>
+      <if test="matureStatue != null" >
+        MATURE_STATUE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="plantName != null" >
+        #{plantName,jdbcType=VARCHAR},
+      </if>
+      <if test="suitableTem != null" >
+        #{suitableTem,jdbcType=VARCHAR},
+      </if>
+      <if test="suitableLight != null" >
+        #{suitableLight,jdbcType=VARCHAR},
+      </if>
+      <if test="suitableLand != null" >
+        #{suitableLand,jdbcType=VARCHAR},
+      </if>
+      <if test="suitableWater != null" >
+        #{suitableWater,jdbcType=VARCHAR},
+      </if>
+      <if test="shootTime != null" >
+        #{shootTime,jdbcType=VARCHAR},
+      </if>
+      <if test="shootStatue != null" >
+        #{shootStatue,jdbcType=VARCHAR},
+      </if>
+      <if test="blossomTime != null" >
+        #{blossomTime,jdbcType=VARCHAR},
+      </if>
+      <if test="blossomStatue != null" >
+        #{blossomStatue,jdbcType=VARCHAR},
+      </if>
+      <if test="fruitTime != null" >
+        #{fruitTime,jdbcType=VARCHAR},
+      </if>
+      <if test="fruitStatue != null" >
+        #{fruitStatue,jdbcType=VARCHAR},
+      </if>
+      <if test="matureTime != null" >
+        #{matureTime,jdbcType=VARCHAR},
+      </if>
+      <if test="matureStatue != null" >
+        #{matureStatue,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.pyl.demo.model.TECHB_info" >
+    update TECHSERV_BEFORE
+    <set >
+      <if test="plantName != null" >
+        PLANT_NAME = #{plantName,jdbcType=VARCHAR},
+      </if>
+      <if test="suitableTem != null" >
+        SUITABLE_TEM = #{suitableTem,jdbcType=VARCHAR},
+      </if>
+      <if test="suitableLight != null" >
+        SUITABLE_LIGHT = #{suitableLight,jdbcType=VARCHAR},
+      </if>
+      <if test="suitableLand != null" >
+        SUITABLE_LAND = #{suitableLand,jdbcType=VARCHAR},
+      </if>
+      <if test="suitableWater != null" >
+        SUITABLE_WATER = #{suitableWater,jdbcType=VARCHAR},
+      </if>
+      <if test="shootTime != null" >
+        SHOOT_TIME = #{shootTime,jdbcType=VARCHAR},
+      </if>
+      <if test="shootStatue != null" >
+        SHOOT_STATUE = #{shootStatue,jdbcType=VARCHAR},
+      </if>
+      <if test="blossomTime != null" >
+        BLOSSOM_TIME = #{blossomTime,jdbcType=VARCHAR},
+      </if>
+      <if test="blossomStatue != null" >
+        BLOSSOM_STATUE = #{blossomStatue,jdbcType=VARCHAR},
+      </if>
+      <if test="fruitTime != null" >
+        FRUIT_TIME = #{fruitTime,jdbcType=VARCHAR},
+      </if>
+      <if test="fruitStatue != null" >
+        FRUIT_STATUE = #{fruitStatue,jdbcType=VARCHAR},
+      </if>
+      <if test="matureTime != null" >
+        MATURE_TIME = #{matureTime,jdbcType=VARCHAR},
+      </if>
+      <if test="matureStatue != null" >
+        MATURE_STATUE = #{matureStatue,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.pyl.demo.model.TECHB_info" >
+    update TECHSERV_BEFORE
+    set PLANT_NAME = #{plantName,jdbcType=VARCHAR},
+      SUITABLE_TEM = #{suitableTem,jdbcType=VARCHAR},
+      SUITABLE_LIGHT = #{suitableLight,jdbcType=VARCHAR},
+      SUITABLE_LAND = #{suitableLand,jdbcType=VARCHAR},
+      SUITABLE_WATER = #{suitableWater,jdbcType=VARCHAR},
+      SHOOT_TIME = #{shootTime,jdbcType=VARCHAR},
+      SHOOT_STATUE = #{shootStatue,jdbcType=VARCHAR},
+      BLOSSOM_TIME = #{blossomTime,jdbcType=VARCHAR},
+      BLOSSOM_STATUE = #{blossomStatue,jdbcType=VARCHAR},
+      FRUIT_TIME = #{fruitTime,jdbcType=VARCHAR},
+      FRUIT_STATUE = #{fruitStatue,jdbcType=VARCHAR},
+      MATURE_TIME = #{matureTime,jdbcType=VARCHAR},
+      MATURE_STATUE = #{matureStatue,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,2 @@
+2019-01-02 21:54:59.878 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2019-01-02 21:54:59.888 logback [http-nio-8082-exec-4] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/TSB/getAllplants

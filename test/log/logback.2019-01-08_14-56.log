@@ -1,0 +1,3 @@
+2019-01-08 14:56:46.349 logback [http-nio-8082-exec-2] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2019-01-08 14:56:46.356 logback [http-nio-8082-exec-2] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/informationBefo/getPlantAndPlace
+2019-01-08 14:56:51.363 logback [http-nio-8082-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - test - Failed to validate connection com.mysql.jdbc.JDBC4Connection@e5d66ce (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.

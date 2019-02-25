@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pyl.demo.mapper.place_record_infoMapper">
+  <resultMap id="BaseResultMap" type="com.pyl.demo.model.place_record_info">
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="MOISTURE" jdbcType="DOUBLE" property="moisture" />
+    <result column="TEMPERATURE" jdbcType="DOUBLE" property="temperature" />
+    <result column="TECH" jdbcType="VARCHAR" property="tech" />
+    <result column="TIME" jdbcType="TIMESTAMP" property="time" />
+    <result column="REMARK" jdbcType="VARCHAR" property="remark" />
+    <result column="USER_ID" jdbcType="INTEGER" property="userId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    ID, NAME, MOISTURE, TEMPERATURE, TECH, TIME, REMARK, USER_ID
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from PLACE_RECORD
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAllPlaceRecord" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from PLACE_RECORD
+    where USER_ID=#{user_id,jdbcType=INTEGER}
+  </select>
+  <select id="selectNumByUser" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+    select
+    count(*)
+    from PLACE_RECORD
+    where USER_ID=#{user_id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from PLACE_RECORD
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.pyl.demo.model.place_record_info">
+    insert into PLACE_RECORD (ID, NAME, MOISTURE, 
+      TEMPERATURE, TECH, TIME, 
+      REMARK, USER_ID)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{moisture,jdbcType=DOUBLE}, 
+      #{temperature,jdbcType=DOUBLE}, #{tech,jdbcType=VARCHAR}, #{time,jdbcType=TIMESTAMP},
+      #{remark,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.pyl.demo.model.place_record_info">
+    insert into PLACE_RECORD
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        ID,
+      </if>
+      <if test="name != null">
+        NAME,
+      </if>
+      <if test="moisture != null">
+        MOISTURE,
+      </if>
+      <if test="temperature != null">
+        TEMPERATURE,
+      </if>
+      <if test="tech != null">
+        TECH,
+      </if>
+      <if test="time != null">
+        TIME,
+      </if>
+      <if test="remark != null">
+        REMARK,
+      </if>
+      <if test="userId != null">
+        USER_ID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="moisture != null">
+        #{moisture,jdbcType=DOUBLE},
+      </if>
+      <if test="temperature != null">
+        #{temperature,jdbcType=DOUBLE},
+      </if>
+      <if test="tech != null">
+        #{tech,jdbcType=VARCHAR},
+      </if>
+      <if test="time != null">
+        #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.pyl.demo.model.place_record_info">
+    update PLACE_RECORD
+    <set>
+      <if test="name != null">
+        NAME = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="moisture != null">
+        MOISTURE = #{moisture,jdbcType=DOUBLE},
+      </if>
+      <if test="temperature != null">
+        TEMPERATURE = #{temperature,jdbcType=DOUBLE},
+      </if>
+      <if test="tech != null">
+        TECH = #{tech,jdbcType=VARCHAR},
+      </if>
+      <if test="time != null">
+        TIME = #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null">
+        REMARK = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null">
+        USER_ID = #{userId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.pyl.demo.model.place_record_info">
+    update PLACE_RECORD
+    set NAME = #{name,jdbcType=VARCHAR},
+      MOISTURE = #{moisture,jdbcType=DOUBLE},
+      TEMPERATURE = #{temperature,jdbcType=DOUBLE},
+      TECH = #{tech,jdbcType=VARCHAR},
+      TIME = #{time,jdbcType=TIMESTAMP},
+      REMARK = #{remark,jdbcType=VARCHAR},
+      USER_ID = #{userId,jdbcType=INTEGER}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

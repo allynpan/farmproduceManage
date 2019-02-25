@@ -1,0 +1,235 @@
+2018-12-21 23:44:19.810 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2018-12-21 23:44:19.821 logback [http-nio-8082-exec-8] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/TSB/getAllplants
+2018-12-21 23:44:24.825 logback [http-nio-8082-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - test - Failed to validate connection com.mysql.jdbc.JDBC4Connection@2d482dd2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2018-12-21 23:44:29.828 logback [http-nio-8082-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - test - Failed to validate connection com.mysql.jdbc.JDBC4Connection@60f4faaf (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2018-12-21 23:44:34.857 logback [http-nio-8082-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - test - Failed to validate connection com.mysql.jdbc.JDBC4Connection@65a4a772 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2018-12-21 23:44:37.390 logback [http-nio-8082-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - test - Failed to validate connection com.mysql.jdbc.JDBC4Connection@77e67f1b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2018-12-21 23:44:39.860 logback [http-nio-8082-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - test - Failed to validate connection com.mysql.jdbc.JDBC4Connection@429f2156 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2018-12-21 23:44:42.392 logback [http-nio-8082-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - test - Failed to validate connection com.mysql.jdbc.JDBC4Connection@79219f97 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2018-12-21 23:44:44.861 logback [http-nio-8082-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - test - Failed to validate connection com.mysql.jdbc.JDBC4Connection@3db06446 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2018-12-21 23:44:47.394 logback [http-nio-8082-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - test - Failed to validate connection com.mysql.jdbc.JDBC4Connection@7d1e146b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2018-12-21 23:44:47.690 logback [http-nio-8082-exec-10] INFO  c.p.d.S.U.impl.UserServiceimpl - 取出的username:aaa取出的password:47bce5c74f589f4867dbd57e9ca9f808
+2018-12-21 23:44:47.832 logback [http-nio-8082-exec-10] INFO  c.pyl.demo.config.WebSecurityConfig - -------请求成功--------
+2018-12-21 23:44:47.833 logback [http-nio-8082-exec-10] INFO  c.pyl.demo.config.WebSecurityConfig - {"status":"success","msg":{"id":1,"username":"aaa","pwd":"47bce5c74f589f4867dbd57e9ca9f808","email":"21@qq.com","nickname":"allyn","address":"Stev. kerr","phone":"510435","roles":[{"id":1,"name":"ROLE_GENERA","namezh":"普通用户"}],"password":"47bce5c74f589f4867dbd57e9ca9f808","enabled":true,"credentialsNonExpired":true,"accountNonExpired":true,"accountNonLocked":true}}
+2018-12-21 23:44:49.865 logback [http-nio-8082-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - test - Failed to validate connection com.mysql.jdbc.JDBC4Connection@7defdbb5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2018-12-21 23:44:49.874 logback [http-nio-8082-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: test - Connection is not available, request timed out after 30044ms.
+### The error may exist in file [D:\ideaProject\farmproduceManage\target\classes\mapping\permission_infoMapper.xml]
+### The error may involve com.pyl.demo.mapper.permission_infoMapper.getAllPemission
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: test - Connection is not available, request timed out after 30044ms.
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:77)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy58.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:139)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:76)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy65.getAllPemission(Unknown Source)
+	at com.pyl.demo.Service.PM_Service.impl.PM_ServiceImpl.getAllPemission(PM_ServiceImpl.java:20)
+	at com.pyl.demo.config.CustomMetadataSource.getAttributes(CustomMetadataSource.java:40)
+	at org.springframework.security.access.intercept.AbstractSecurityInterceptor.beforeInvocation(AbstractSecurityInterceptor.java:197)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:124)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:52)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:206)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: test - Connection is not available, request timed out after 30044ms.
+### The error may exist in file [D:\ideaProject\farmproduceManage\target\classes\mapping\permission_infoMapper.xml]
+### The error may involve com.pyl.demo.mapper.permission_infoMapper.getAllPemission
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: test - Connection is not available, request timed out after 30044ms.
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:150)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at sun.reflect.GeneratedMethodAccessor63.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 80 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: test - Connection is not available, request timed out after 30044ms.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:82)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:68)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:338)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:84)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	... 85 common frames omitted
+Caused by: java.sql.SQLTransientConnectionException: test - Connection is not available, request timed out after 30044ms.
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:676)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:190)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:155)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:151)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	... 95 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1015)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:989)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:975)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:920)
+	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1304)
+	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1296)
+	at com.mysql.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:6081)
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:550)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:165)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:179)
+	... 100 common frames omitted
+2018-12-21 23:44:50.307 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2018-12-21 23:44:50.307 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/TSB/getAllplants
+2018-12-21 23:44:50.448 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=1, url='/mainpage/**', path='/mainpage', component='home', name='mainpage', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@6fbcb715, com.pyl.demo.model.role@551d87fa], children=null}
+2018-12-21 23:44:50.448 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=2, url='/login', path='/login', component='login', name='login', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@4b246a3, com.pyl.demo.model.role@7ebb1455], children=null}
+2018-12-21 23:44:50.448 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=3, url='/per_info', path='/per_info', component='per_info', name='per_info', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@74351088, com.pyl.demo.model.role@4d2e6ba3], children=null}
+2018-12-21 23:44:50.448 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=4, url='/User/**', path='/per_info', component='per_info', name='per_info', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@5bbfbbfb, com.pyl.demo.model.role@7d801565], children=null}
+2018-12-21 23:44:50.448 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=5, url='/TSB/getAllplants', path='null', component='null', name='null', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@21edfb0d, com.pyl.demo.model.role@1fa0efe0], children=null}
+2018-12-21 23:44:50.448 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:44:50.448 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:44:50.448 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:44:50.448 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:44:50.448 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:44:50.448 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:44:50.448 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:44:50.448 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:44:50.448 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:44:50.448 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:44:50.448 logback [http-nio-8082-exec-1] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:44:50.448 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**请求的url：/TSB/getAllplants
+2018-12-21 23:44:50.448 logback [http-nio-8082-exec-1] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:44:50.448 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login请求的url：/TSB/getAllplants
+2018-12-21 23:44:50.449 logback [http-nio-8082-exec-1] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:44:50.449 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/per_info请求的url：/TSB/getAllplants
+2018-12-21 23:44:50.449 logback [http-nio-8082-exec-1] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:44:50.449 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/User/**请求的url：/TSB/getAllplants
+2018-12-21 23:44:50.449 logback [http-nio-8082-exec-1] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:44:50.449 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getAllplants请求的url：/TSB/getAllplants
+2018-12-21 23:44:50.449 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2018-12-21 23:44:50.449 logback [http-nio-8082-exec-1] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2018-12-21 23:44:50.449 logback [http-nio-8082-exec-1] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2018-12-21 23:44:50.449 logback [http-nio-8082-exec-1] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_ADMIN
+2018-12-21 23:44:50.449 logback [http-nio-8082-exec-1] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2018-12-21 23:44:50.449 logback [http-nio-8082-exec-1] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA当前的角色是：ROLE_ADMIN
+2018-12-21 23:44:50.449 logback [http-nio-8082-exec-1] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_GENERA
+2018-12-21 23:44:50.449 logback [http-nio-8082-exec-1] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2018-12-21 23:44:50.449 logback [http-nio-8082-exec-1] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA当前的角色是：ROLE_GENERA
+2018-12-21 23:44:50.449 logback [http-nio-8082-exec-1] INFO  c.p.d.c.UrlAccessDecisionManager - 拥有权限，准许使用该功能！
+2018-12-21 23:44:51.167 logback [http-nio-8082-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - test - Failed to validate connection com.mysql.jdbc.JDBC4Connection@6c982f67 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2018-12-21 23:44:51.379 logback [http-nio-8082-exec-2] INFO  c.p.d.S.U.impl.UserServiceimpl - 取出的username:aaa取出的password:47bce5c74f589f4867dbd57e9ca9f808
+2018-12-21 23:44:51.483 logback [http-nio-8082-exec-2] INFO  c.pyl.demo.config.WebSecurityConfig - -------请求成功--------
+2018-12-21 23:44:51.483 logback [http-nio-8082-exec-2] INFO  c.pyl.demo.config.WebSecurityConfig - {"status":"success","msg":{"id":1,"username":"aaa","pwd":"47bce5c74f589f4867dbd57e9ca9f808","email":"21@qq.com","nickname":"allyn","address":"Stev. kerr","phone":"510435","roles":[{"id":1,"name":"ROLE_GENERA","namezh":"普通用户"}],"password":"47bce5c74f589f4867dbd57e9ca9f808","enabled":true,"credentialsNonExpired":true,"accountNonExpired":true,"accountNonLocked":true}}
+2018-12-21 23:44:53.284 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2018-12-21 23:44:53.285 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/TSB/getAllplants
+2018-12-21 23:44:53.442 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=1, url='/mainpage/**', path='/mainpage', component='home', name='mainpage', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@5594380, com.pyl.demo.model.role@ee61c1d], children=null}
+2018-12-21 23:44:53.442 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=2, url='/login', path='/login', component='login', name='login', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@6c7ee9d7, com.pyl.demo.model.role@6964ba17], children=null}
+2018-12-21 23:44:53.443 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=3, url='/per_info', path='/per_info', component='per_info', name='per_info', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@26eea1f8, com.pyl.demo.model.role@185657cc], children=null}
+2018-12-21 23:44:53.443 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=4, url='/User/**', path='/per_info', component='per_info', name='per_info', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@37d2540, com.pyl.demo.model.role@4f05833a], children=null}
+2018-12-21 23:44:53.443 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 所拥有的权限:permission_info{id=5, url='/TSB/getAllplants', path='null', component='null', name='null', iconCls='null', keepAlive='null', requireAuth='null', parentId=null, roles=[com.pyl.demo.model.role@1cb70a43, com.pyl.demo.model.role@3675d62e], children=null}
+2018-12-21 23:44:53.443 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:44:53.443 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:44:53.443 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:44:53.443 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:44:53.443 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:44:53.443 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:44:53.443 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:44:53.443 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:44:53.443 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_ADMIN
+2018-12-21 23:44:53.443 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 获取对应的角色名:ROLE_GENERA
+2018-12-21 23:44:53.443 logback [http-nio-8082-exec-3] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:44:53.443 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**请求的url：/TSB/getAllplants
+2018-12-21 23:44:53.443 logback [http-nio-8082-exec-3] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:44:53.443 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login请求的url：/TSB/getAllplants
+2018-12-21 23:44:53.443 logback [http-nio-8082-exec-3] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:44:53.443 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/per_info请求的url：/TSB/getAllplants
+2018-12-21 23:44:53.443 logback [http-nio-8082-exec-3] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:44:53.443 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/User/**请求的url：/TSB/getAllplants
+2018-12-21 23:44:53.444 logback [http-nio-8082-exec-3] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-21 23:44:53.444 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getAllplants请求的url：/TSB/getAllplants
+2018-12-21 23:44:53.444 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2018-12-21 23:44:53.444 logback [http-nio-8082-exec-3] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2018-12-21 23:44:53.444 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2018-12-21 23:44:53.444 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_ADMIN
+2018-12-21 23:44:53.444 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2018-12-21 23:44:53.444 logback [http-nio-8082-exec-3] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA当前的角色是：ROLE_ADMIN
+2018-12-21 23:44:53.444 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_GENERA
+2018-12-21 23:44:53.444 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2018-12-21 23:44:53.444 logback [http-nio-8082-exec-3] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA当前的角色是：ROLE_GENERA
+2018-12-21 23:44:53.444 logback [http-nio-8082-exec-3] INFO  c.p.d.c.UrlAccessDecisionManager - 拥有权限，准许使用该功能！

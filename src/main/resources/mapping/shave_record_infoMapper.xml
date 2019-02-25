@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pyl.demo.mapper.shave_record_infoMapper" >
+  <resultMap id="BaseResultMap" type="com.pyl.demo.model.shave_record_info" >
+    <id column="ID" property="id" jdbcType="INTEGER" />
+    <result column="METHOD" property="method" jdbcType="VARCHAR" />
+    <result column="NUMBER" property="number" jdbcType="INTEGER" />
+    <result column="Time" property="time" jdbcType="TIMESTAMP" />
+    <result column="STATUE" property="statue" jdbcType="VARCHAR" />
+    <result column="REMARK" property="remark" jdbcType="VARCHAR" />
+    <result column="USER_ID" property="userId" jdbcType="INTEGER" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="EXECUTOR" property="executor" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, METHOD, NUMBER, Time, STATUE, REMARK, USER_ID, NAME,EXECUTOR
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from SHAVE_RECORD
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAllByUser" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from SHAVE_RECORD
+    where USER_ID =#{user_id,jdbcType=INTEGER}
+  </select>
+  <select id="selectShaveRecordNum" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+    select
+    count(*)
+    from SHAVE_RECORD
+    where USER_ID =#{user_id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from SHAVE_RECORD
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.pyl.demo.model.shave_record_info" >
+    insert into SHAVE_RECORD (ID, METHOD, NUMBER, 
+      Time, STATUE, REMARK, 
+      USER_ID, NAME)
+    values (#{id,jdbcType=INTEGER}, #{method,jdbcType=VARCHAR}, #{number,jdbcType=INTEGER}, 
+      #{time,jdbcType=TIMESTAMP}, #{statue,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR},
+      #{userId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.pyl.demo.model.shave_record_info" >
+    insert into SHAVE_RECORD
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="method != null" >
+        METHOD,
+      </if>
+      <if test="number != null" >
+        NUMBER,
+      </if>
+      <if test="time != null" >
+        Time,
+      </if>
+      <if test="statue != null" >
+        STATUE,
+      </if>
+      <if test="remark != null" >
+        REMARK,
+      </if>
+      <if test="userId != null" >
+        USER_ID,
+      </if>
+      <if test="name != null" >
+        NAME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="method != null" >
+        #{method,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null" >
+        #{number,jdbcType=INTEGER},
+      </if>
+      <if test="time != null" >
+        #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="statue != null" >
+        #{statue,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.pyl.demo.model.shave_record_info" >
+    update SHAVE_RECORD
+    <set >
+      <if test="method != null" >
+        METHOD = #{method,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null" >
+        NUMBER = #{number,jdbcType=INTEGER},
+      </if>
+      <if test="time != null" >
+        Time = #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="statue != null" >
+        STATUE = #{statue,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        REMARK = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null" >
+        USER_ID = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        NAME = #{name,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.pyl.demo.model.shave_record_info" >
+    update SHAVE_RECORD
+    set METHOD = #{method,jdbcType=VARCHAR},
+      NUMBER = #{number,jdbcType=INTEGER},
+      Time = #{time,jdbcType=TIMESTAMP},
+      STATUE = #{statue,jdbcType=VARCHAR},
+      REMARK = #{remark,jdbcType=VARCHAR},
+      USER_ID = #{userId,jdbcType=INTEGER},
+      NAME = #{name,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

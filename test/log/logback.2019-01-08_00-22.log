@@ -1,0 +1,38 @@
+2019-01-08 00:22:15.576 logback [main] INFO  com.DemoApplication - Starting DemoApplication on PYL with PID 16760 (D:\ideaProject\farmproduceManage\target\classes started by 宇龙 in D:\ideaProject\farmproduceManage)
+2019-01-08 00:22:15.594 logback [main] INFO  com.DemoApplication - No active profile set, falling back to default profiles: default
+2019-01-08 00:22:18.920 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2019-01-08 00:22:18.932 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2019-01-08 00:22:18.940 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-01-08 00:22:18.940 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-01-08 00:22:18.949 logback [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_191\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;%QUARTUS_ROOTDIR%\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\130\DTS\Binn\;D:\MATLAB\R2016a\runtime\win64;D:\MATLAB\R2016a\bin;D:\MATLAB\R2016a\polyspace\bin;C:\Program Files\nodejs\;D:\Microsoft VS Code\bin;D:\Python\Python37\Scripts\;D:\Python\Python37\;C:\Users\宇龙\AppData\Local\Microsoft\WindowsApps;C:\mysql-5.7.17-winx64 (1)\mysql-5.7.17-winx64\bin;C:\Wind\Wind.NET.Client\WindNET\bin\;D:\apache-ant-1.9.11-bin\apache-ant-1.9.11\bin;D:\hadoop\hadoop-2.9.0\bin;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;;D:\Microsoft VS Code\bin;C:\Users\宇龙\AppData\Roaming\npm;D:\JetBrains\PyCharm Community Edition 2018.3.2\bin;;.]
+2019-01-08 00:22:19.109 logback [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-01-08 00:22:19.110 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3313 ms
+2019-01-08 00:22:19.160 logback [main] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-08 00:22:19.160 logback [main] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-08 00:22:19.161 logback [main] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2019-01-08 00:22:19.161 logback [main] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-08 00:22:19.161 logback [main] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-01-08 00:22:19.162 logback [main] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2019-01-08 00:22:19.659 logback [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'infoMaComtroller': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.pyl.demo.Service.UserService.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-01-08 00:22:19.661 logback [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2019-01-08 00:22:19.672 logback [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-08 00:22:19.862 logback [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userService in com.pyl.demo.Controller.InfoMaComtroller required a bean of type 'com.pyl.demo.Service.UserService.UserService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.pyl.demo.Service.UserService.UserService' in your configuration.
+

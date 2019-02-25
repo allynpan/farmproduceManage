@@ -1,0 +1,31 @@
+2018-12-25 21:43:19.796 logback [http-nio-8082-exec-5] INFO  c.p.d.S.U.impl.UserServiceimpl - 取出的username:aaa取出的password:47bce5c74f589f4867dbd57e9ca9f808
+2018-12-25 21:43:19.838 logback [http-nio-8082-exec-5] INFO  c.pyl.demo.config.WebSecurityConfig - --------请求失败处理--------
+2018-12-25 21:43:19.839 logback [http-nio-8082-exec-5] INFO  c.pyl.demo.config.WebSecurityConfig - null
+2018-12-25 21:43:19.839 logback [http-nio-8082-exec-5] INFO  c.pyl.demo.config.WebSecurityConfig - 账号或者密码输入错误！
+2018-12-25 21:43:21.202 logback [http-nio-8082-exec-4] INFO  c.p.d.S.U.impl.UserServiceimpl - 取出的username:aaa取出的password:47bce5c74f589f4867dbd57e9ca9f808
+2018-12-25 21:43:21.229 logback [http-nio-8082-exec-4] INFO  com.pyl.demo.model.USER_info - ------调用user model中的调用证书------
+2018-12-25 21:43:21.229 logback [http-nio-8082-exec-4] INFO  com.pyl.demo.model.USER_info - 此次获得的证书:[ROLE_GENERA]
+2018-12-25 21:43:21.233 logback [http-nio-8082-exec-4] INFO  c.pyl.demo.config.WebSecurityConfig - -------请求成功--------
+2018-12-25 21:43:21.234 logback [http-nio-8082-exec-4] INFO  c.pyl.demo.config.WebSecurityConfig - {"status":"success","msg":{"id":1,"username":"aaa","pwd":"47bce5c74f589f4867dbd57e9ca9f808","email":"21@qq.com","nickname":"allyn","address":"Stev. kerr","phone":"510435","img_path":null,"roles":[{"id":1,"name":"ROLE_GENERA","namezh":"普通用户"}],"password":"47bce5c74f589f4867dbd57e9ca9f808","enabled":true,"accountNonExpired":true,"accountNonLocked":true,"credentialsNonExpired":true}}
+2018-12-25 21:43:29.942 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - ---------进入CustomMetadataSource----------
+2018-12-25 21:43:29.942 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 请求的url：/TSB/getAllplants
+2018-12-25 21:43:29.973 logback [http-nio-8082-exec-6] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-25 21:43:29.973 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/mainpage/**请求的url：/TSB/getAllplants
+2018-12-25 21:43:29.973 logback [http-nio-8082-exec-6] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-25 21:43:29.973 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/login请求的url：/TSB/getAllplants
+2018-12-25 21:43:29.973 logback [http-nio-8082-exec-6] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-25 21:43:29.974 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/per_info请求的url：/TSB/getAllplants
+2018-12-25 21:43:29.974 logback [http-nio-8082-exec-6] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-25 21:43:29.974 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/User/**请求的url：/TSB/getAllplants
+2018-12-25 21:43:29.974 logback [http-nio-8082-exec-6] WARN  c.p.demo.config.CustomMetadataSource - 角色数目:2
+2018-12-25 21:43:29.974 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 数据库中的url：/TSB/getAllplants请求的url：/TSB/getAllplants
+2018-12-25 21:43:29.974 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_ADMIN
+2018-12-25 21:43:29.974 logback [http-nio-8082-exec-6] INFO  c.p.demo.config.CustomMetadataSource - 对应的准许访问该url的角色：ROLE_GENERA
+2018-12-25 21:43:29.974 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - --------------进入权限验证函数--------------
+2018-12-25 21:43:29.974 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_ADMIN
+2018-12-25 21:43:29.974 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2018-12-25 21:43:29.974 logback [http-nio-8082-exec-6] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     当前的角色是：ROLE_ADMIN
+2018-12-25 21:43:29.974 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 该次账号角色：ROLE_GENERA
+2018-12-25 21:43:29.975 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 获取对应的证书：[ROLE_GENERA]
+2018-12-25 21:43:29.975 logback [http-nio-8082-exec-6] WARN  c.p.d.c.UrlAccessDecisionManager - 当前需要的权限是：ROLE_GENERA     当前的角色是：ROLE_GENERA
+2018-12-25 21:43:29.975 logback [http-nio-8082-exec-6] INFO  c.p.d.c.UrlAccessDecisionManager - 拥有权限，准许使用该功能！

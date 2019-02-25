@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pyl.demo.mapper.USER_infoMapper" >
+  <resultMap id="BaseResultMap" type="com.pyl.demo.model.USER_info" >
+    <id column="ID" property="id" jdbcType="INTEGER" />
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+    <result column="PWD" property="pwd" jdbcType="VARCHAR" />
+    <result column="EMAIL" property="email" jdbcType="VARCHAR" />
+    <result column="NICKNAME" property="nickname" jdbcType="VARCHAR" />
+    <result column="ADDRESS" property="address" jdbcType="VARCHAR" />
+    <result column="PHONE" property="phone" jdbcType="VARCHAR" />
+    <result column="IMG_PATH" property="img_path" jdbcType="VARCHAR"/>
+  </resultMap>
+   <resultMap id="lazyLoadRoles" type="com.pyl.demo.model.USER_info" extends="BaseResultMap">
+      <collection property="roles" ofType="com.pyl.demo.model.role" select="com.pyl.demo.mapper.USER_infoMapper.getRolesByUSERId" column="ID">
+      </collection>
+   </resultMap>
+  <sql id="Base_Column_List" >
+    ID, USERNAME, PWD, EMAIL, NICKNAME, ADDRESS, PHONE,IMG_PATH
+  </sql>
+  <select id="getRolesByUSERId" resultType="com.pyl.demo.model.role">
+        SELECT r.* FROM USER_ROLE u,ROLE r where u.ROLE_ID=r.ID AND u.USER_ID=#{id}
+  </select>
+  <select id="loadUserByUsername" resultMap="lazyLoadRoles" parameterType="java.lang.String">
+        SELECT
+        <include refid="Base_Column_List" />
+        from USER
+        where USERNAME =#{username,jdbcType=VARCHAR}
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from USER
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectIDByUsername" resultType="java.lang.Integer" parameterType="java.lang.String">
+    select
+    ID
+    from USER
+    where USERNAME =#{username,jdbcType=VARCHAR}
+  </select>
+  <select id="selectByUserNameAndPassword" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select
+    <include refid="Base_Column_List" />
+    from USER
+    where USERNAME=#{username,jdbcType=VARCHAR} and PWD=#{pwd,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from USER
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.pyl.demo.model.USER_info" >
+    insert into USER (ID, USERNAME, PWD, 
+      EMAIL, NICKNAME, ADDRESS, 
+      PHONE)
+    values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{pwd,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{nickname,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{phone,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.pyl.demo.model.USER_info" >
+    insert into USER
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="username != null" >
+        USERNAME,
+      </if>
+      <if test="pwd != null" >
+        PWD,
+      </if>
+      <if test="email != null" >
+        EMAIL,
+      </if>
+      <if test="nickname != null" >
+        NICKNAME,
+      </if>
+      <if test="address != null" >
+        ADDRESS,
+      </if>
+      <if test="phone != null" >
+        PHONE,
+      </if>
+      <if test="img_path != null">
+        img_path
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="pwd != null" >
+        #{pwd,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="nickname != null" >
+        #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="img_path != null" >
+        #{img_path,jdbcType=VARCHAR}
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.pyl.demo.model.USER_info" >
+    update USER
+    <set >
+      <if test="username != null" >
+        USERNAME = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="pwd != null" >
+        PWD = #{pwd,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        EMAIL = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="nickname != null" >
+        NICKNAME = #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        ADDRESS = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        PHONE = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="img_path != null" >
+        #{img_path,jdbcType=VARCHAR}
+      </if>
+    </set>
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.pyl.demo.model.USER_info" >
+    update USER
+    set USERNAME = #{username,jdbcType=VARCHAR},
+      PWD = #{pwd,jdbcType=VARCHAR},
+      EMAIL = #{email,jdbcType=VARCHAR},
+      NICKNAME = #{nickname,jdbcType=VARCHAR},
+      ADDRESS = #{address,jdbcType=VARCHAR},
+      PHONE = #{phone,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

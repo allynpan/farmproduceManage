@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pyl.demo.mapper.disease_record_infoMapper" >
+  <resultMap id="BaseResultMap" type="com.pyl.demo.model.disease_record_info" >
+    <id column="ID" property="id" jdbcType="INTEGER" />
+    <result column="PLACE" property="place" jdbcType="VARCHAR" />
+    <result column="SQUARE" property="square" jdbcType="DOUBLE" />
+    <result column="NUM" property="num" jdbcType="INTEGER" />
+    <result column="DISEASE_NUM" property="diseaseNum" jdbcType="INTEGER" />
+    <result column="DISEASE_RATE" property="diseaseRate" jdbcType="DOUBLE" />
+    <result column="INSECT_NAME" property="insectName" jdbcType="VARCHAR" />
+    <result column="TIME" property="time" jdbcType="TIMESTAMP" />
+    <result column="USER_ID" property="userId" jdbcType="INTEGER" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="IS_FINISH" property="isFinish" jdbcType="TINYINT" />
+    <result column="PROTECT_TIME" property="protectTime" jdbcType="TIMESTAMP" />
+    <result column="MEDICINE" property="medicine" jdbcType="VARCHAR" />
+    <result column="DOSAGE" property="dosage" jdbcType="DOUBLE" />
+    <result column="RESULT" property="result" jdbcType="VARCHAR" />
+    <result column="EXECUTOR" property="executor" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, PLACE, SQUARE, NUM, DISEASE_NUM, DISEASE_RATE, INSECT_NAME, TIME, USER_ID, NAME, 
+    IS_FINISH, PROTECT_TIME, MEDICINE, DOSAGE, RESULT, EXECUTOR
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from DISEASE_RECORD
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAllByUser" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    select
+    <include refid="Base_Column_List" />
+    from DISEASE_RECORD
+    where USER_ID =#{user_id,jdbcType=INTEGER}
+  </select>
+  <select id="selectDiseaseNum" resultType="java.lang.Integer" parameterType="java.lang.Integer">
+    select
+    count(*)
+    from DISEASE_RECORD
+    where USER_ID =#{user_id,jdbcType=INTEGER}
+  </select>
+  <select id="selectIDByName" resultType="java.lang.Integer" parameterType="java.lang.String">
+    select
+    ID
+    from DISEASE_RECORD
+    where NAME =#{name,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from DISEASE_RECORD
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.pyl.demo.model.disease_record_info" >
+    insert into DISEASE_RECORD (ID, PLACE, SQUARE, 
+      NUM, DISEASE_NUM, DISEASE_RATE, 
+      INSECT_NAME, TIME, USER_ID, 
+      NAME, IS_FINISH, PROTECT_TIME, 
+      MEDICINE, DOSAGE, RESULT, 
+      EXECUTOR)
+    values (#{id,jdbcType=INTEGER}, #{place,jdbcType=VARCHAR}, #{square,jdbcType=DOUBLE}, 
+      #{num,jdbcType=INTEGER}, #{diseaseNum,jdbcType=INTEGER}, #{diseaseRate,jdbcType=DOUBLE}, 
+      #{insectName,jdbcType=VARCHAR}, #{time,jdbcType=TIMESTAMP}, #{userId,jdbcType=INTEGER},
+      #{name,jdbcType=VARCHAR}, #{isFinish,jdbcType=TINYINT}, #{protectTime,jdbcType=TIMESTAMP},
+      #{medicine,jdbcType=VARCHAR}, #{dosage,jdbcType=DOUBLE}, #{result,jdbcType=VARCHAR}, 
+      #{executor,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.pyl.demo.model.disease_record_info" >
+    insert into DISEASE_RECORD
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="place != null" >
+        PLACE,
+      </if>
+      <if test="square != null" >
+        SQUARE,
+      </if>
+      <if test="num != null" >
+        NUM,
+      </if>
+      <if test="diseaseNum != null" >
+        DISEASE_NUM,
+      </if>
+      <if test="diseaseRate != null" >
+        DISEASE_RATE,
+      </if>
+      <if test="insectName != null" >
+        INSECT_NAME,
+      </if>
+      <if test="time != null" >
+        TIME,
+      </if>
+      <if test="userId != null" >
+        USER_ID,
+      </if>
+      <if test="name != null" >
+        NAME,
+      </if>
+      <if test="isFinish != null" >
+        IS_FINISH,
+      </if>
+      <if test="protectTime != null" >
+        PROTECT_TIME,
+      </if>
+      <if test="medicine != null" >
+        MEDICINE,
+      </if>
+      <if test="dosage != null" >
+        DOSAGE,
+      </if>
+      <if test="result != null" >
+        RESULT,
+      </if>
+      <if test="executor != null" >
+        EXECUTOR,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="place != null" >
+        #{place,jdbcType=VARCHAR},
+      </if>
+      <if test="square != null" >
+        #{square,jdbcType=DOUBLE},
+      </if>
+      <if test="num != null" >
+        #{num,jdbcType=INTEGER},
+      </if>
+      <if test="diseaseNum != null" >
+        #{diseaseNum,jdbcType=INTEGER},
+      </if>
+      <if test="diseaseRate != null" >
+        #{diseaseRate,jdbcType=DOUBLE},
+      </if>
+      <if test="insectName != null" >
+        #{insectName,jdbcType=VARCHAR},
+      </if>
+      <if test="time != null" >
+        #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="isFinish != null" >
+        #{isFinish,jdbcType=TINYINT},
+      </if>
+      <if test="protectTime != null" >
+        #{protectTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="medicine != null" >
+        #{medicine,jdbcType=VARCHAR},
+      </if>
+      <if test="dosage != null" >
+        #{dosage,jdbcType=DOUBLE},
+      </if>
+      <if test="result != null" >
+        #{result,jdbcType=VARCHAR},
+      </if>
+      <if test="executor != null" >
+        #{executor,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.pyl.demo.model.disease_record_info" >
+    update DISEASE_RECORD
+    <set >
+      <if test="place != null" >
+        PLACE = #{place,jdbcType=VARCHAR},
+      </if>
+      <if test="square != null" >
+        SQUARE = #{square,jdbcType=DOUBLE},
+      </if>
+      <if test="num != null" >
+        NUM = #{num,jdbcType=INTEGER},
+      </if>
+      <if test="diseaseNum != null" >
+        DISEASE_NUM = #{diseaseNum,jdbcType=INTEGER},
+      </if>
+      <if test="diseaseRate != null" >
+        DISEASE_RATE = #{diseaseRate,jdbcType=DOUBLE},
+      </if>
+      <if test="insectName != null" >
+        INSECT_NAME = #{insectName,jdbcType=VARCHAR},
+      </if>
+      <if test="time != null" >
+        TIME = #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userId != null" >
+        USER_ID = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        NAME = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="isFinish != null" >
+        IS_FINISH = #{isFinish,jdbcType=TINYINT},
+      </if>
+      <if test="protectTime != null" >
+        PROTECT_TIME = #{protectTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="medicine != null" >
+        MEDICINE = #{medicine,jdbcType=VARCHAR},
+      </if>
+      <if test="dosage != null" >
+        DOSAGE = #{dosage,jdbcType=DOUBLE},
+      </if>
+      <if test="result != null" >
+        RESULT = #{result,jdbcType=VARCHAR},
+      </if>
+      <if test="executor != null" >
+        EXECUTOR = #{executor,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.pyl.demo.model.disease_record_info" >
+    update DISEASE_RECORD
+    set PLACE = #{place,jdbcType=VARCHAR},
+      SQUARE = #{square,jdbcType=DOUBLE},
+      NUM = #{num,jdbcType=INTEGER},
+      DISEASE_NUM = #{diseaseNum,jdbcType=INTEGER},
+      DISEASE_RATE = #{diseaseRate,jdbcType=DOUBLE},
+      INSECT_NAME = #{insectName,jdbcType=VARCHAR},
+      TIME = #{time,jdbcType=TIMESTAMP},
+      USER_ID = #{userId,jdbcType=INTEGER},
+      NAME = #{name,jdbcType=VARCHAR},
+      IS_FINISH = #{isFinish,jdbcType=TINYINT},
+      PROTECT_TIME = #{protectTime,jdbcType=TIMESTAMP},
+      MEDICINE = #{medicine,jdbcType=VARCHAR},
+      DOSAGE = #{dosage,jdbcType=DOUBLE},
+      RESULT = #{result,jdbcType=VARCHAR},
+      EXECUTOR = #{executor,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
