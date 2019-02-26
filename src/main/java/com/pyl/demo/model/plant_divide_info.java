@@ -2,20 +2,24 @@ package com.pyl.demo.model;
 
 import java.util.Date;
 
-public class collect_record_info {
+public class plant_divide_info {
     private Integer id;
 
     private String plantName;
 
-    private String plantation;
+    private String address;
 
-    private String rulesCollect;
+    private String rulesPack;
 
-    private Byte isFinish;
+    private String remark;
 
     private Date dealTime;
 
     private String username;
+
+    private String quality;
+
+    private String size;
 
     private Double number;
 
@@ -35,28 +39,28 @@ public class collect_record_info {
         this.plantName = plantName == null ? null : plantName.trim();
     }
 
-    public String getPlantation() {
-        return plantation;
+    public String getAddress() {
+        return address;
     }
 
-    public void setPlantation(String plantation) {
-        this.plantation = plantation == null ? null : plantation.trim();
+    public void setAddress(String address) {
+        this.address = address == null ? null : address.trim();
     }
 
-    public String getRulesCollect() {
-        return rulesCollect;
+    public String getRulesPack() {
+        return rulesPack;
     }
 
-    public void setRulesCollect(String rulesCollect) {
-        this.rulesCollect = rulesCollect == null ? null : rulesCollect.trim();
+    public void setRulesPack(String rulesPack) {
+        this.rulesPack = rulesPack == null ? null : rulesPack.trim();
     }
 
-    public Byte getIsFinish() {
-        return isFinish;
+    public String getRemark() {
+        return remark;
     }
 
-    public void setIsFinish(Byte isFinish) {
-        this.isFinish = isFinish;
+    public void setRemark(String remark) {
+        this.remark = remark == null ? null : remark.trim();
     }
 
     public Date getDealTime() {
@@ -73,6 +77,22 @@ public class collect_record_info {
 
     public void setUsername(String username) {
         this.username = username == null ? null : username.trim();
+    }
+
+    public String getQuality() {
+        return quality;
+    }
+
+    public void setQuality(String quality) {
+        this.quality = quality == null ? null : quality.trim();
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size == null ? null : size.trim();
     }
 
     public Double getNumber() {

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pyl.demo.mapper.plant_traffic_infoMapper" >
+  <resultMap id="BaseResultMap" type="com.pyl.demo.model.plant_traffic_info" >
+    <id column="ID" property="id" jdbcType="INTEGER" />
+    <result column="PLACE_BEGIN" property="placeBegin" jdbcType="VARCHAR" />
+    <result column="PLACE_END" property="placeEnd" jdbcType="VARCHAR" />
+    <result column="PLANT_NAME" property="plantName" jdbcType="VARCHAR" />
+    <result column="WEIGHT" property="weight" jdbcType="DOUBLE" />
+    <result column="REMARK" property="remark" jdbcType="VARCHAR" />
+    <result column="DEAL_DATE" property="dealDate" jdbcType="TIMESTAMP" />
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, PLACE_BEGIN, PLACE_END, PLANT_NAME, WEIGHT, REMARK, DEAL_DATE, USERNAME
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from PLANT_TRAFFIC
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAllTraf" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select
+    <include refid="Base_Column_List" />
+    from PLANT_TRAFFIC
+    where USERNAME = #{username,jdbcType=VARCHAR}
+  </select>
+  <select id="getTrafficNum" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select
+    count(*)
+    from PLANT_TRAFFIC
+    where USERNAME = #{username,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from PLANT_TRAFFIC
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.pyl.demo.model.plant_traffic_info" >
+    insert into PLANT_TRAFFIC (ID, PLACE_BEGIN, PLACE_END, 
+      PLANT_NAME, WEIGHT, REMARK, 
+      DEAL_DATE, USERNAME)
+    values (#{id,jdbcType=INTEGER}, #{placeBegin,jdbcType=VARCHAR}, #{placeEnd,jdbcType=VARCHAR}, 
+      #{plantName,jdbcType=VARCHAR}, #{weight,jdbcType=DOUBLE}, #{remark,jdbcType=VARCHAR}, 
+      #{dealDate,jdbcType=TIMESTAMP}, #{username,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.pyl.demo.model.plant_traffic_info" >
+    insert into PLANT_TRAFFIC
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="placeBegin != null" >
+        PLACE_BEGIN,
+      </if>
+      <if test="placeEnd != null" >
+        PLACE_END,
+      </if>
+      <if test="plantName != null" >
+        PLANT_NAME,
+      </if>
+      <if test="weight != null" >
+        WEIGHT,
+      </if>
+      <if test="remark != null" >
+        REMARK,
+      </if>
+      <if test="dealDate != null" >
+        DEAL_DATE,
+      </if>
+      <if test="username != null" >
+        USERNAME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="placeBegin != null" >
+        #{placeBegin,jdbcType=VARCHAR},
+      </if>
+      <if test="placeEnd != null" >
+        #{placeEnd,jdbcType=VARCHAR},
+      </if>
+      <if test="plantName != null" >
+        #{plantName,jdbcType=VARCHAR},
+      </if>
+      <if test="weight != null" >
+        #{weight,jdbcType=DOUBLE},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="dealDate != null" >
+        #{dealDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.pyl.demo.model.plant_traffic_info" >
+    update PLANT_TRAFFIC
+    <set >
+      <if test="placeBegin != null" >
+        PLACE_BEGIN = #{placeBegin,jdbcType=VARCHAR},
+      </if>
+      <if test="placeEnd != null" >
+        PLACE_END = #{placeEnd,jdbcType=VARCHAR},
+      </if>
+      <if test="plantName != null" >
+        PLANT_NAME = #{plantName,jdbcType=VARCHAR},
+      </if>
+      <if test="weight != null" >
+        WEIGHT = #{weight,jdbcType=DOUBLE},
+      </if>
+      <if test="remark != null" >
+        REMARK = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="dealDate != null" >
+        DEAL_DATE = #{dealDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="username != null" >
+        USERNAME = #{username,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.pyl.demo.model.plant_traffic_info" >
+    update PLANT_TRAFFIC
+    set PLACE_BEGIN = #{placeBegin,jdbcType=VARCHAR},
+      PLACE_END = #{placeEnd,jdbcType=VARCHAR},
+      PLANT_NAME = #{plantName,jdbcType=VARCHAR},
+      WEIGHT = #{weight,jdbcType=DOUBLE},
+      REMARK = #{remark,jdbcType=VARCHAR},
+      DEAL_DATE = #{dealDate,jdbcType=TIMESTAMP},
+      USERNAME = #{username,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

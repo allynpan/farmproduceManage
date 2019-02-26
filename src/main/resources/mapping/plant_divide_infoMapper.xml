@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pyl.demo.mapper.plant_divide_infoMapper" >
+  <resultMap id="BaseResultMap" type="com.pyl.demo.model.plant_divide_info" >
+    <id column="ID" property="id" jdbcType="INTEGER" />
+    <result column="PLANT_ NAME" property="plantName" jdbcType="VARCHAR" />
+    <result column="ADDRESS" property="address" jdbcType="VARCHAR" />
+    <result column="RULES_PACK" property="rulesPack" jdbcType="VARCHAR" />
+    <result column="REMARK" property="remark" jdbcType="VARCHAR" />
+    <result column="DEAL_TIME" property="dealTime" jdbcType="TIMESTAMP" />
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+    <result column="QUALITY" property="quality" jdbcType="VARCHAR" />
+    <result column="SIZE" property="size" jdbcType="VARCHAR" />
+    <result column="NUMBER" property="number" jdbcType="DOUBLE" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, "PLANT_ NAME", ADDRESS, RULES_PACK, REMARK, DEAL_TIME, USERNAME, QUALITY, SIZE, 
+    NUMBER
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from PLANT_DIVIDE_PACK
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAllDividePack" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select
+    <include refid="Base_Column_List" />
+    from PLANT_DIVIDE_PACK
+    where USERNAME = #{username,jdbcType=VARCHAR}
+  </select>
+  <select id="getDividePackNum" resultType="java.lang.Integer" parameterType="java.lang.String">
+    select
+    count(*)
+    from PLANT_DIVIDE_PACK
+    where USERNAME = #{username,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from PLANT_DIVIDE_PACK
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.pyl.demo.model.plant_divide_info" >
+    insert into PLANT_DIVIDE_PACK (ID, "PLANT_ NAME", ADDRESS, 
+      RULES_PACK, REMARK, DEAL_TIME, 
+      USERNAME, QUALITY, SIZE, 
+      NUMBER)
+    values (#{id,jdbcType=INTEGER}, #{plantName,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{rulesPack,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{dealTime,jdbcType=TIMESTAMP}, 
+      #{username,jdbcType=VARCHAR}, #{quality,jdbcType=VARCHAR}, #{size,jdbcType=VARCHAR}, 
+      #{number,jdbcType=DOUBLE})
+  </insert>
+  <insert id="insertSelective" parameterType="com.pyl.demo.model.plant_divide_info" >
+    insert into PLANT_DIVIDE_PACK
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="plantName != null" >
+        "PLANT_ NAME",
+      </if>
+      <if test="address != null" >
+        ADDRESS,
+      </if>
+      <if test="rulesPack != null" >
+        RULES_PACK,
+      </if>
+      <if test="remark != null" >
+        REMARK,
+      </if>
+      <if test="dealTime != null" >
+        DEAL_TIME,
+      </if>
+      <if test="username != null" >
+        USERNAME,
+      </if>
+      <if test="quality != null" >
+        QUALITY,
+      </if>
+      <if test="size != null" >
+        SIZE,
+      </if>
+      <if test="number != null" >
+        NUMBER,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="plantName != null" >
+        #{plantName,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="rulesPack != null" >
+        #{rulesPack,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="dealTime != null" >
+        #{dealTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="quality != null" >
+        #{quality,jdbcType=VARCHAR},
+      </if>
+      <if test="size != null" >
+        #{size,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null" >
+        #{number,jdbcType=DOUBLE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.pyl.demo.model.plant_divide_info" >
+    update PLANT_DIVIDE_PACK
+    <set >
+      <if test="plantName != null" >
+        "PLANT_ NAME" = #{plantName,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        ADDRESS = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="rulesPack != null" >
+        RULES_PACK = #{rulesPack,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        REMARK = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="dealTime != null" >
+        DEAL_TIME = #{dealTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="username != null" >
+        USERNAME = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="quality != null" >
+        QUALITY = #{quality,jdbcType=VARCHAR},
+      </if>
+      <if test="size != null" >
+        SIZE = #{size,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null" >
+        NUMBER = #{number,jdbcType=DOUBLE},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.pyl.demo.model.plant_divide_info" >
+    update PLANT_DIVIDE_PACK
+    set "PLANT_ NAME" = #{plantName,jdbcType=VARCHAR},
+      ADDRESS = #{address,jdbcType=VARCHAR},
+      RULES_PACK = #{rulesPack,jdbcType=VARCHAR},
+      REMARK = #{remark,jdbcType=VARCHAR},
+      DEAL_TIME = #{dealTime,jdbcType=TIMESTAMP},
+      USERNAME = #{username,jdbcType=VARCHAR},
+      QUALITY = #{quality,jdbcType=VARCHAR},
+      SIZE = #{size,jdbcType=VARCHAR},
+      NUMBER = #{number,jdbcType=DOUBLE}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,26 +1,20 @@
 package com.pyl.demo.Controller;
 
-import com.pyl.demo.Service.UserService.impl.UserServiceimpl;
+import com.pyl.demo.Service.UserService.impl.UserServiceImpl;
 import com.pyl.demo.Service.infoService.infoService;
 import com.pyl.demo.Util.RespBean;
 import com.pyl.demo.Util.UTCtoDate;
 import com.pyl.demo.model.disease_record_info;
-import com.pyl.demo.model.plant_info;
 import com.pyl.demo.model.plant_place_info;
 import com.pyl.demo.model.shave_record_info;
-import jdk.nashorn.internal.scripts.JO;
 import org.json.JSONException;
-import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.validation.constraints.Null;
 import java.text.ParseException;
 import java.util.Date;
 import java.util.List;
@@ -36,7 +30,7 @@ public class InfoMaComtroller {
     private infoService infoService;
 
     @Autowired
-    private UserServiceimpl userService;
+    private UserServiceImpl userService;
 
     @ResponseBody
     @RequestMapping(value = "/test",produces = {"application/json;charset=UTF-8"})

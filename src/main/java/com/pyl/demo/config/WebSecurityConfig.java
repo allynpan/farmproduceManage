@@ -2,17 +2,13 @@ package com.pyl.demo.config;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.pyl.demo.Service.UserService.UserService;
-import com.pyl.demo.Service.UserService.impl.UserServiceimpl;
-import com.pyl.demo.Util.MD5Util;
+import com.pyl.demo.Service.UserService.impl.UserServiceImpl;
 import com.pyl.demo.Util.RespBean;
-import com.pyl.demo.Util.ResultUtil;
 import com.pyl.demo.Util.USERutil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 import org.springframework.security.authentication.*;
 import org.springframework.security.config.annotation.ObjectPostProcessor;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -45,7 +41,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private final static Logger logger = LoggerFactory.getLogger(WebSecurityConfig.class);
 
     @Autowired
-    UserServiceimpl userServiceimpl;
+    UserServiceImpl userServiceimpl;
     @Autowired
     UrlAccessDecisionManager urlAccessDecisionManager;
     @Autowired

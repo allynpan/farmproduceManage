@@ -1,7 +1,5 @@
 package com.pyl.demo.Service.UserService.impl;
 
-
-import com.pyl.demo.Service.UserService.UserService;
 import com.pyl.demo.mapper.USER_infoMapper;
 import com.pyl.demo.model.USER_info;
 import org.slf4j.Logger;
@@ -13,22 +11,17 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-
-
-
 @Service("UserService")
 @Transactional
-public class UserServiceimpl implements UserDetailsService {
-
-    private final static Logger logger = LoggerFactory.getLogger(UserServiceimpl.class);
+public class UserServiceImpl implements UserDetailsService {
+    private final static Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
     @Autowired
     private USER_infoMapper USER_INFO_MAPPER;
 
     //select对应的用户名和密码,用户登录
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException{
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         USER_info user_info = USER_INFO_MAPPER.loadUserByUsername(username);
         logger.info("取出的username:"+user_info.getUsername()+"取出的password:"+user_info.getPassword());
         if(user_info==null){
@@ -61,15 +54,5 @@ public class UserServiceimpl implements UserDetailsService {
     public int getID(String username){
         return USER_INFO_MAPPER.selectIDByUsername(username);
     }
-
-
-
-
-
-
-
-
-
-
 
 }

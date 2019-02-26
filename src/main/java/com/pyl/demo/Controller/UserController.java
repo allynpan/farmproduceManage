@@ -1,7 +1,6 @@
 package com.pyl.demo.Controller;
 
-import com.pyl.demo.Service.UserService.UserService;
-import com.pyl.demo.Service.UserService.impl.UserServiceimpl;
+import com.pyl.demo.Service.UserService.impl.UserServiceImpl;
 import com.pyl.demo.Util.RespBean;
 import com.pyl.demo.Util.Result;
 import com.pyl.demo.Util.ResultUtil;
@@ -21,7 +20,7 @@ public class UserController {
     private final static Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
-    private UserServiceimpl userService;
+    private UserServiceImpl userService;
 
     @ResponseBody
     @RequestMapping(value = "/register",produces = {"application/json;charset=UTF-8"})

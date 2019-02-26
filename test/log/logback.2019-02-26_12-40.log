@@ -1,0 +1,43 @@
+2019-02-26 12:40:40.853 logback [main] INFO  com.DemoApplication - Starting DemoApplication on DESKTOP-CCNDCIB with PID 16436 (D:\ideaProject\farmproduceManagez1\target\classes started by allyn in D:\ideaProject\farmproduceManagez1)
+2019-02-26 12:40:40.859 logback [main] INFO  com.DemoApplication - No active profile set, falling back to default profiles: default
+2019-02-26 12:40:41.945 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2019-02-26 12:40:41.954 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2019-02-26 12:40:41.956 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-02-26 12:40:41.957 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-02-26 12:40:41.961 logback [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_201\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;D:\Git\cmd;D:\nodejs\;C:\Users\allyn\AppData\Local\Microsoft\WindowsApps;D:\IntelliJ IDEA 2018.3.4\bin;;D:\Microsoft VS Code\bin;D:\apache-maven-3.6.0-bin\apache-maven-3.6.0\bin;C:\Users\allyn\AppData\Roaming\npm;D:\Git\bin;;.]
+2019-02-26 12:40:42.028 logback [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-02-26 12:40:42.030 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1079 ms
+2019-02-26 12:40:42.072 logback [main] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-26 12:40:42.072 logback [main] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-26 12:40:42.072 logback [main] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2019-02-26 12:40:42.072 logback [main] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-26 12:40:42.073 logback [main] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-02-26 12:40:42.073 logback [main] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2019-02-26 12:40:42.073 logback [main] INFO  o.s.b.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2019-02-26 12:40:42.073 logback [main] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet statViewServlet mapped to [/druid/*]
+2019-02-26 12:40:42.074 logback [main] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2019-02-26 12:40:42.074 logback [main] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet statViewServlet mapped to [/druid/*]
+2019-02-26 12:40:42.074 logback [main] INFO  o.s.b.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2019-02-26 12:40:42.449 logback [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'infoFinController': Unsatisfied dependency expressed through field 'infoFinService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.pyl.demo.Service.infoFinService.infoFinService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-02-26 12:40:42.451 logback [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2019-02-26 12:40:42.465 logback [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-02-26 12:40:42.544 logback [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field infoFinService in com.pyl.demo.Controller.infoFinController required a bean of type 'com.pyl.demo.Service.infoFinService.infoFinService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.pyl.demo.Service.infoFinService.infoFinService' in your configuration.
+
