@@ -16,9 +16,7 @@ public class permission_info {
 
     private String iconCls;
 
-    private String keepAlive;
-
-    private String requireAuth;
+    private menuMeta meta;
 
     private Integer parentId;
 
@@ -90,28 +88,20 @@ public class permission_info {
         this.iconCls = iconCls == null ? null : iconCls.trim();
     }
 
-    public String getKeepAlive() {
-        return keepAlive;
-    }
-
-    public void setKeepAlive(String keepAlive) {
-        this.keepAlive = keepAlive == null ? null : keepAlive.trim();
-    }
-
-    public String getRequireAuth() {
-        return requireAuth;
-    }
-
-    public void setRequireAuth(String requireAuth) {
-        this.requireAuth = requireAuth == null ? null : requireAuth.trim();
-    }
-
     public Integer getParentId() {
         return parentId;
     }
 
     public void setParentId(Integer parentId) {
         this.parentId = parentId;
+    }
+
+    public menuMeta getMeta() {
+        return meta;
+    }
+
+    public void setMeta(menuMeta meta) {
+        this.meta = meta;
     }
 
     @Override
@@ -123,8 +113,6 @@ public class permission_info {
                 ", component='" + component + '\'' +
                 ", name='" + name + '\'' +
                 ", iconCls='" + iconCls + '\'' +
-                ", keepAlive='" + keepAlive + '\'' +
-                ", requireAuth='" + requireAuth + '\'' +
                 ", parentId=" + parentId +
                 ", roles=" + roles +
                 ", children=" + children +

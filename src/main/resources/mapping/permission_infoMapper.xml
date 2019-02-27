@@ -8,25 +8,51 @@
     <result column="COMPONENT" property="component" jdbcType="VARCHAR" />
     <result column="NAME" property="name" jdbcType="VARCHAR" />
     <result column="ICON_CLS" property="iconCls" jdbcType="VARCHAR" />
-    <result column="KEEP_ALIVE" property="keepAlive" jdbcType="VARCHAR" />
-    <result column="REQUIRE_AUTH" property="requireAuth" jdbcType="VARCHAR" />
     <result column="PARENT_ID" property="parentId" jdbcType="INTEGER" />
+    <association property="meta" javaType="com.pyl.demo.model.menuMeta">
+      <result column="keepAlive" property="keepAlive"/>
+      <result column="requireAuth" property="requireAuth"/>
+    </association>
     <collection property="roles" ofType="com.pyl.demo.model.role">
       <id column="rid" property="id"/>
       <result column="rname" property="name"/>
       <result column="rnamezh" property="namezh"/>
     </collection>
+    <collection property="children" ofType="com.pyl.demo.model.permission_info">
+      <id column="id2" property="id" jdbcType="INTEGER"/>
+      <result column="path2" property="path" jdbcType="VARCHAR"/>
+      <result column="component2" property="component" jdbcType="VARCHAR"/>
+      <result column="name2" property="name" jdbcType="VARCHAR"/>
+      <result column="iconCls2" property="iconCls" jdbcType="VARCHAR"/>
+      <association property="meta" javaType="com.pyl.demo.model.menuMeta">
+        <result column="keepAlive2" property="keepAlive"/>
+        <result column="requireAuth2" property="requireAuth"/>
+      </association>
+      <collection property="children" ofType="com.pyl.demo.model.permission_info">
+        <id column="id3" property="id"/>
+        <result column="name3" property="name" jdbcType="VARCHAR"/>
+      </collection>
+    </collection>
   </resultMap>
   <sql id="Base_Column_List" >
     ID, URL, PATH, COMPONENT, NAME, ICON_CLS, KEEP_ALIVE, REQUIRE_AUTH, PARENT_ID
   </sql>
-
   <select id="getAllPemission" resultMap="BaseResultMap">
     select m.*,r.ID as rid,r.NAME as rname,r.NAMEZH as rnamezh from PERMISSION m left join PERMISSION_ROLE mr
     on m.ID = mr.PERMISSION_ID
     left join ROLE r on mr.ROLE_ID = r.ID
     order by m.ID
   </select>
+  <select id="getMenuByPerId" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    m1.ID,m1.PATH,m1.COMPONENT,m1.ICON_CLS,m1.NAME,m1.REQUIRE_AUTH,m2.COMPONENT as component2,m2.ICON_CLS as iconCls2,m2.KEEP_ALIVE as keepAlive2,m2.NAME as name2,m2.PATH as path2,m2.REQUIRE_AUTH as requireAuth2
+    from PERMISSION m1,PERMISSION m2
+    where m1.ID =m2.PARENT_ID and m1.ID !=16 and m2.ID in(select pr.PERMISSION_ID from USER_ROLE ur,PERMISSION_ROLE pr where ur.ROLE_ID = pr.ROLE_ID and ur.ID = #{perId})
+    order by m1.ID,m2.ID
+  </select>
+
+
+
 
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -45,7 +71,7 @@
       )
     values (#{id,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR}, #{path,jdbcType=VARCHAR}, 
       #{component,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{iconCls,jdbcType=VARCHAR}, 
-      #{keepAlive,jdbcType=VARCHAR}, #{requireAuth,jdbcType=VARCHAR}, #{parentId,jdbcType=INTEGER}
+      #{keepAlive,jdbcType=TINYINT}, #{requireAuth,jdbcType=TINYINT}, #{parentId,jdbcType=INTEGER}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.pyl.demo.model.permission_info" >
@@ -99,7 +125,7 @@
         #{iconCls,jdbcType=VARCHAR},
       </if>
       <if test="keepAlive != null" >
-        #{keepAlive,jdbcType=VARCHAR},
+        #{keepAlive,jdbcType=TINYINT},
       </if>
       <if test="requireAuth != null" >
         #{requireAuth,jdbcType=VARCHAR},
@@ -128,7 +154,7 @@
         ICON_CLS = #{iconCls,jdbcType=VARCHAR},
       </if>
       <if test="keepAlive != null" >
-        KEEP_ALIVE = #{keepAlive,jdbcType=VARCHAR},
+        KEEP_ALIVE = #{keepAlive,jdbcType=TINYINT},
       </if>
       <if test="requireAuth != null" >
         REQUIRE_AUTH = #{requireAuth,jdbcType=VARCHAR},
@@ -146,8 +172,8 @@
       COMPONENT = #{component,jdbcType=VARCHAR},
       NAME = #{name,jdbcType=VARCHAR},
       ICON_CLS = #{iconCls,jdbcType=VARCHAR},
-      KEEP_ALIVE = #{keepAlive,jdbcType=VARCHAR},
-      REQUIRE_AUTH = #{requireAuth,jdbcType=VARCHAR},
+      KEEP_ALIVE = #{keepAlive,jdbcType=TINYINT},
+      REQUIRE_AUTH = #{requireAuth,jdbcType=TINYINT},
       PARENT_ID = #{parentId,jdbcType=INTEGER}
     where ID = #{id,jdbcType=INTEGER}
   </update>

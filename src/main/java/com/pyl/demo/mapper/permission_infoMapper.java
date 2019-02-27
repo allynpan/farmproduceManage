@@ -19,4 +19,6 @@ public interface permission_infoMapper {
 
     List<permission_info> getAllPemission();
 
+    List<permission_info> getMenuByPerId(Long perId);
+
 }
